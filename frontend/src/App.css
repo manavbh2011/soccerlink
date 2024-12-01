@@ -1,0 +1,87 @@
+body {
+    background-color: #58a65c; /* Light green background */
+    margin: 0;                /* Remove default browser margins */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: #042D63;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Horizontal spacing between input boxes */
+    margin-bottom: 20px; /* Space between inputs and results */
+  }
+  
+  .input-label {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-bottom: 5px; 
+  }
+  /* Input box styling */
+  .input-box {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #042D63;
+    border-radius: 5px;
+    width: 200px;
+    /*margin-bottom: 20px;*/
+  }
+  
+  /* Submit button styling */
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #042D63;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #2a4d69;
+  }
+
+  .submit-button:disabled {
+    background-color: gray; /* Example: grey out the button */
+    cursor: not-allowed; /* Change the cursor to indicate the button is disabled */
+    opacity: 0.5; /* Optionally, reduce opacity */
+  }
+  
+  /* Results styling */
+  .results {
+    margin-top: 60px;
+  }
+
+  .result-line {
+    margin: 20px 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #042D63;
+  }
+
+  .error-message {
+    color: #cc0000;
+    font-size: 25px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
