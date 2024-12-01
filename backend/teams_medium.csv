@@ -1,0 +1,1778 @@
+id,team_name
+1,Inter
+2,Barcelona
+3,Chelsea
+4,AC Milan
+5,Juventus
+6,Real Madrid
+7,Man Utd
+8,Bayern Munich
+9,Liverpool
+10,Marseille
+11,Tottenham
+12,Arsenal
+13,Aston Villa
+14,West Ham
+15,Man City
+16,Everton
+17,AS Roma
+18,Monaco
+19,Newcastle
+20,Atlético Madrid
+21,Ajax
+22,Leeds
+23,Paris SG
+24,Borussia Dortmund
+25,Benfica
+26,Lazio
+27,Olympique Lyon
+28,G. Bordeaux
+29,Saint-Étienne
+30,Hamburger SV
+31,Portsmouth
+32,Leicester
+33,PSV Eindhoven
+34,Werder Bremen
+35,Fulham
+36,Fiorentina
+37,1.FC Köln
+38,Stoke City
+39,Middlesbrough
+40,FC Schalke 04
+41,Blackburn
+42,Sunderland
+43,VfB Stuttgart
+44,FC Porto
+45,Valencia
+46,Southampton
+47,Birmingham
+48,Borussia Monchengladbach
+49,Sampdoria
+50,Galatasaray
+51,Rangers
+52,Bayer Leverkusen
+53,West Brom
+54,QPR
+55,River Plate
+56,Bolton
+57,Nottm Forest
+58,Sevilla FC
+59,Napoli
+60,OGC Nice
+61,Celtic
+62,Eintrach Frankfurt
+63,RSC Anderlecht
+64,Feyenoord
+65,Coventry
+66,Red Star
+67,Villarreal
+68,Standard Liège
+69,Real Zaragoza
+70,AC Parma
+71,1.FC K'lautern
+72,LOSC Lille
+73,Crystal Palace
+74,Derby
+75,Boca Juniors
+76,Sporting CP
+77,Bologna
+78,Montpellier
+79,AEK Athens
+80,Fenerbahce
+81,VfL Wolfsburg
+82,Stade Rennais
+83,Austria Vienna
+84,Real Betis
+85,FC Metz
+86,Cardiff
+87,Wolves
+88,Dynamo Kyiv
+89,São Paulo
+90,Sheff Utd
+91,Vasco da Gama
+92,Genoa
+93,Unknown
+94,Olympiacos
+95,Hannover 96
+96,Flamengo
+97,Swansea
+98,Hertha BSC
+99,FC Nantes
+100,Corinthians
+101,IFK Göteborg
+102,Millwall
+103,Rapid Vienna
+104,Hellas Verona
+105,Ipswich
+106,Burnley
+107,Real Sociedad
+108,Grasshoppers
+109,Dep. La Coruña
+110,R. Strasbourg
+111,Barça U19
+112,Watford
+113,Norwich
+114,Wigan
+115,Torino
+116,Stade Reims
+117,Brescia
+118,Dinamo Zagreb
+119,Besiktas
+120,Panathinaikos
+121,Bournemouth
+122,Blackpool
+123,Fluminense
+124,CSKA Sofia
+125,TSG Hoffenheim
+126,1.FC Nuremberg
+127,SM Caen
+128,Sheff Wed
+129,Real Valladolid
+130,Dukla Prague
+131,Ajax U19
+132,LA Galaxy
+133,Guingamp
+134,Santos
+135,NY Cosmos
+136,Charlton
+137,Neuchâtel Xamax
+138,Hajduk Split
+139,Al-Gharafa
+140,RC Paris
+141,AJ Auxerre
+142,Barcelona B
+143,Botafogo
+144,Cannes
+145,1860 Munich
+146,Cruzeiro
+147,Barça U16
+148,Swindon Town
+149,Spartak Moscow
+150,Sparta Prague
+151,Steaua Bucharest
+152,Feijenoord
+153,Hull City
+154,Le Havre AC
+155,Udinese
+156,Norrköping
+157,Bröndby IF
+158,FC Bayern U19
+159,First Vienna FC
+160,US Valenciennes
+161,Partizan
+162,Sporting U19
+163,OFK Beograd
+164,Racing Club
+165,FC Sochaux
+166,Atalanta
+167,Dinamo Tbilisi
+168,Karlsruher SC
+169,EC Vitória
+170,SC Bastia
+171,Whitecaps
+172,Lausanne-Sport
+173,Dinamo Moscow
+174,Servette FC
+175,Como
+176,Perugia
+177,FC Groningen
+178,Reading
+179,Vicenza
+180,Palmeiras
+181,FC Zürich
+182,Celta de Vigo
+183,AC Pisa
+184,Wimbledon FC
+185,Ferencváros
+186,SC Freiburg
+187,Stade Français
+188,Varese
+189,AS Nancy
+190,Sporting Gijón
+191,Club Brugge
+192,1.FSV Mainz 05
+193,Piacenza
+194,Doncaster
+195,Al-Sadd
+196,Toulouse
+197,Mogi Mirim
+198,Brighton
+199,KSC Lokeren
+200,Slavia Prague
+201,FL Strikers
+202,K. Offenbach
+203,Al-Rayyan
+204,Maccabi Haifa
+205,Inter U19
+206,Preston
+207,Lens
+208,Nacional
+209,Bari
+210,Vejle BK
+211,Heerenveen
+212,Espanyol
+213,Slo. Bratislava
+214,Atlético-MG
+215,FC Augsburg
+216,Bradford
+217,Atalanta BC
+218,1.FC Kosice
+219,La Fiorita
+220,KV Mechelen
+221,Ajax U17
+222,New York City
+223,Estudiantes LP
+224,Basaksehir
+225,Zeljeznicar
+226,Nîmes Olympique
+227,R Charleroi SC
+228,Dundee FC
+229,Górnik Zabrze
+230,Castilla CF
+231,Bristol City
+232,AC Ajaccio
+233,Widzew Lodz
+234,Olymp. Lyon B
+235,Trabzonspor
+236,Adana Demirspor
+237,FC Sion
+238,Bury
+239,FC Bayern U17
+240,KRC Genk
+241,Schalke 04 U19
+242,Benfica U19
+243,Salernitana
+244,Rayo Vallecano
+245,FC Dinamo
+246,Sint-Truiden
+247,Notts County
+248,Torpedo Moskau
+249,Man City Res.
+250,US Palermo
+251,Legia Warszawa
+252,Man Utd Res.
+253,NK Marsonia
+254,Málaga CF
+255,Internacional
+256,Ponte Preta
+257,Union Berlin
+258,Man Utd U18
+259,Seiko
+260,Udinese Calcio
+261,Hamburg U19
+262,Al-Nassr
+263,Newell's
+264,U. Craiova
+265,Ban
+266,Español
+267,AC Torino
+268,FC St. Gallen
+269,Sporting U17
+270,Chicago
+271,Honvéd SE
+272,Grazer AK
+273,Grêmio
+274,MetroStars
+275,UD Las Palmas
+276,Bay. Uerdingen
+277,Újpesti Dózsa
+278,DSV Leoben
+279,Malmö FF
+280,Banska Bystrica
+281,Toronto Bliz.
+282,FC Bayern II
+283,Banik Ostrava
+284,St. Pölten
+285,Schalke 04 U17
+286,Huddersfield
+287,São Caetano
+288,Barnet
+289,Benfica U17
+290,FC Chiasso
+291,Ajax U21
+292,Saarbrücken
+293,SC Braga
+294,Örgryte
+295,LDU Quito
+296,Luton
+297,Rosenborg
+298,Helsingborgs IF
+299,SEC Bastia
+300,Botafogo-SP
+301,Aris Saloniki
+302,CD Tenerife
+303,FC Porto U19
+304,SH SIPG
+305,Slovan Liberec
+306,Zenit S-Pb
+307,FC Utrecht
+308,Levante
+309,Sporting Sub-15
+310,Crewe Alexandra
+311,FC Nantes B
+312,Real Madrid B
+313,Lyngby BK
+314,RCD Mallorca
+315,Antalyaspor
+316,Argentinos Jrs.
+317,Colo-Colo
+318,NAC
+319,Al-Ahli
+320,PAOK Salonika
+321,Vissel Kobe
+322,Mantova
+323,Vitesse
+324,Mulhouse
+325,FC Lorient
+326,Stuttgart U17
+327,Stuttgart U19
+328,Twente FC
+329,Shrewsbury
+330,Delhi Dynamos
+331,Casino Salzburg
+332,Östers IF
+333,Reggiana
+334,SH Shenhua
+335,Hartlepool
+336,St. Louis Stars
+337,FC Basel
+338,Miami
+339,Savona
+340,MVV Maastricht
+341,Al-Ittihad
+342,ASEC Mimosas
+343,Metalurg D.
+344,Aarhus GF
+345,B. München Yth.
+346,Palermo
+347,Iraklis
+348,Floridsdorfer AC
+349,Melbourne City
+350,Schalke 04 Yth.
+351,D.C. United
+352,AC Bellinzona
+353,Olymp. Lyon U19
+354,Al-Arabi SC
+355,Monaco B
+356,Orlando
+357,Padova
+358,FC Sète 34
+359,Tranmere Rovers
+360,FC Copenhagen
+361,FC Luzern
+362,1.FC Magdeburg
+363,Urawa Reds
+364,Ascoli
+365,KRC Genk U19
+366,KRC Genk U17
+367,St. Mirren
+368,Triestina
+369,Independiente
+370,FC St. Pauli
+371,Reggina
+372,AIK
+373,Millonarios
+374,FC Barcelona
+375,Los Angeles Aztecs
+376,FC Metz B
+377,Carlisle United
+378,Barcelona C
+379,Atl. Madrid B
+380,Cagliari Calcio
+381,NK Zagreb
+382,Tigres UANL
+383,Mumbai City
+384,Cerezo Osaka
+385,Austria Salzb.
+386,Lierse SK
+387,ÍBV
+388,Juventude
+389,Stuttgart Yth.
+390,Stuttgart II
+391,Willem II
+392,Kayserispor
+393,Perth Glory
+394,Tampa Bay
+395,Puebla FC
+396,AC Arles-Avignon
+397,Odense BK
+398,CD El Nacional
+399,Royal Antwerp
+400,Hammarby
+401,Rio Branco-SP
+402,FC Grenoble D.
+403,Leyton Orient
+404,Spurs U18
+405,Oxford United
+406,Aberdeen FC
+407,FK Austria Vienn
+408,Albacete
+409,Angers SCO
+410,VfL Bochum
+411,Vitória Setúbal
+412,LAFC
+413,C. Budejovice
+414,Al-Talaba SC
+415,U. de Chile
+416,Verona
+417,Swansea Town
+418,Loko Plovdiv
+419,Melbourne
+420,Chinoin S.C.
+421,H. Rostock U17
+422,Detroit Express
+423,Al-Hilal
+424,Xerxes
+425,Al-Ahli (UAE)
+426,FC Twente
+427,UNAM Pumas
+428,Osmanlispor FK
+429,Dynamo Dresden
+430,Herediano
+431,Stade Brestois
+432,Stockport
+433,New York
+434,Cork Celtic FC
+435,AZ '67
+436,Hibernian FC
+437,Atlético Celaya
+438,CS Sedan
+439,Alverca
+440,Levski Sofia
+441,Chornomorets
+442,TCity
+443,Wiener SC
+444,Hellerup IK
+445,Gamba Osaka
+446,B. Jerusalem
+447,Rosario Central
+448,Croatia Zagreb
+449,NK Olimpija
+450,RW Essen
+451,AGOVV
+452,Hércules CF
+453,DSV Alpine
+454,Sturm Graz
+455,Sport. Cristal
+456,KAA Gent U21
+457,F. Düsseldorf
+458,Avellino
+459,Colorado
+460,FC Sochaux B
+461,TKC Yaoundé
+462,Etar
+463,Saint-Pierroise
+464,Hansa Rostock
+465,Red Star FC
+466,Vélez Sarsfield
+467,Real Madrid C
+468,Peñarol
+469,New England
+470,RB Leipzig
+471,Bristol Rovers
+472,Valencia B
+473,Qatar SC
+474,Anzhi
+475,Wrexham
+476,Oldham Athletic
+477,Trento
+478,Örebro SK
+479,Barnsley FC
+480,Foggia
+481,Sportist Sofia
+482,H. Rostock U19
+483,Casertana
+484,IK Sleipner
+485,Saint-Étienne B
+486,Leverkusen U17
+487,FC Goa
+488,Holstein Kiel
+489,FC Biel-Bienne
+490,San Sebastián CF
+491,Sydney United
+492,Croatia Sesvete
+493,Iwuanyanwu Nat'l
+494,LB Châteauroux
+495,CD Logroñés
+496,Eendracht Aalst
+497,RWD Molenbeek
+498,SW Essen U17
+499,CZ Jena II
+500,Metalist Kharkiv
+501,Wanderers
+502,Athletic
+503,Le Havre B
+504,Anderlecht U17
+505,Carl Zeiss Jena
+506,Yokohama Marinos
+507,Barreirense
+508,Tombense
+509,GIF Sundsvall
+510,Velez Mostar
+511,CSM Resita
+512,FC Volendam
+513,Spartak Sofia
+514,Grenoble
+515,Rapid Youth
+516,Cercle Brugge
+517,Banfield
+518,HNK Rijeka
+519,Al-Duhail SC
+520,Excelsior
+521,Real Murcia
+522,Vasas SC
+523,Grenoble B
+524,M'gladbach II
+525,Figueirense FC
+526,Deutschlandsbg.
+527,Tours FC
+528,SC Westtünnen
+529,Highlands Park 
+530,Slovan HAC
+531,Paris FC
+532,Chicago Sting
+533,Indep. Santa Fe
+534,Knights
+535,Ancona
+536,PSV Amateurs
+537,Chaux-de-Fonds
+538,Viktoria Zizkov
+539,Vojvodina
+540,1.FC Köln Yth.
+541,Le Havre U19
+542,Beroe
+543,1.FC Köln U17
+544,SV Spittal/Drau
+545,SV Feldkirchen
+546,EC Bahia
+547,Slavia Sofia
+548,Lecce
+549,Falkirk
+550,Coritiba FC
+551,LIAZ Jablonec
+552,AS Livorno
+553,AJ Auxerre B
+554,Juventus-SP
+555,Sambenedettese
+556,FC Locarno
+557,FC Aarau
+558,CZ Jena U19
+559,Guarani
+560,Tottenham Res.
+561,SK Beveren-Waes
+562,Fremad Amager
+563,Fortuna Sittard
+564,BSC Young Boys
+565,Spartak Trnava
+566,CFKA Sredets
+567,Sligo Rovers
+568,FC Tirol
+569,Wattens-Wacker
+570,GAIS
+571,MDA Chasselay
+572,Cobresal
+573,UD Salamanca
+574,W. Mannheim
+575,CDNV
+576,K'lautern U19
+577,Torpedo Kutaisi
+578,Chievo Verona
+579,Ethn. Piraeus
+580,Simmering
+581,SC Neusiedl/See
+582,BFC Dynamo
+583,Hertha BSC II
+584,Spartak II
+585,KRC Mechelen
+586,Treviso
+587,Al-Nasr
+588,FC Basel U21
+589,Vit. Guimarães
+590,Proleter Zrenj.
+591,Kuban Krasnodar
+592,FK Sarajevo
+593,LKS Lodz
+594,AS Red Star 93
+595,Tisnov
+596,Tatabánya
+597,Vevey Sports
+598,TJ Quanjian
+599,Cesena
+600,Toronto
+601,SKA Rostov
+602,Zorya
+603,APOEL Nicosia
+604,Kawasaki Front.
+605,Ajax Youth 
+606,CSKA Moscow
+607,Kalmar FF
+608,Åtvidabergs FF
+609,Rennes B
+610,Chieti
+611,Fellows ZH
+612,Racing
+613,Kasimpasa
+614,FC Oberneuland
+615,Aldershot FC
+616,Kittsee
+617,Go Ahead Eagles
+618,Santos Laguna
+619,Benfica U15
+620,SC Leffe
+621,Modena
+622,Al-Ain
+623,Darlington
+624,Penafiel
+625,Central Coast
+626,Atl. Kolkata
+627,FC Locomotive
+628,América
+629,Sant'Anna
+630,Naestved IF
+631,Clyde FC
+632,Júbilo Iwata
+633,Lech Poznan
+634,Luceafărul Buc
+635,Brann
+636,Torino U19
+637,União São João
+638,Parma
+639,Ravenna
+640,Real Madrid U17
+641,Volán SC
+642,Jihlava
+643,Real Madrid U18
+644,Querétaro FC
+645,Chelsea U18
+646,M'gladbach U19
+647,Emirates Club
+648,Nagoya Grampus
+649,Barmbek-U.
+650,Hellenic FC
+651,TeBe Berlin
+652,B. Dortmund U17
+653,St. Pat's
+654,Salgueiros
+655,Macclesfield
+656,Haarlem
+657,Atl. Nacional
+658,Northampton
+659,Dömsöd
+660,R. Sociedad U19
+661,Marseille U19
+662,Alessandria
+663,Seattle Sounders
+664,Sydney Olympic
+665,Molde FK
+666,M'gladbach U17
+667,Monaco U19
+668,HJK Helsinki
+669,Konyaspor
+670,ASEC Mimosas B
+671,KSK Beveren
+672,SC V.-M. U19
+673,SC V.-M. U17
+674,Kashima Antlers
+675,Instituto ACC
+676,San Jose Clash
+677,Yeovil Town
+678,Jewish Guild
+679,Kremser SC
+680,M'gladbach Yth.
+681,Sydney FC
+682,Sevilla B
+683,América-RJ
+684,Sporting B
+685,Scunthorpe Utd.
+686,Chamois Niort
+687,Toluca U20
+688,Dijon
+689,NK Zadar 
+690,Montreal
+691,Tottenham Yth.
+692,E. Braunschweig
+693,Wembley
+694,Stuttg. Kickers
+695,Skoda Plzen
+696,Austria U17
+697,Austria U19
+698,Din. Zagreb U17
+699,MYPA
+700,FC Lahti
+701,Dortmund Yth.
+702,FC Sepsi-78
+703,Le Havre U17
+704,Hamburg U17
+705,Telstar
+706,Teplice
+707,Diplomats
+708,Barça Youth
+709,US Cagliari
+710,OGC Nice B
+711,Torquay
+712,FC Lugano
+713,Port Vale
+714,Kidderminster
+715,PERSIB
+716,Athletico-PR
+717,Beira-Mar
+718,Kerala Blasters
+719,Hamburger SV II
+720,SC Freiburg U19
+721,ATK
+722,Aston Villa U18
+723,Pune City
+724,B. Podgorica
+725,Seattle
+726,Avaí FC
+727,SD Eibar
+728,Atlante
+729,DWS
+730,York City
+731,Peterborough
+732,VfB Leipzig
+733,River Plate II
+734,AS Cannes U19
+735,Atl. Madrid U19
+736,Bangor City
+737,Chesterfield FC
+738,Vardar
+739,Blacktown City
+740,Liverpool U18
+741,Pelita Jaya
+742,FC Wacker
+743,PEC Zwolle
+744,Rotherham
+745,Aachen U17 
+746,Philadelphia Spartans
+747,SW Bregenz
+748,Aachen U19 
+749,KSV Roeselare
+750,Velox
+751,Aachen Yth.
+752,Shamrock Rovers
+753,Dimitrovgrad
+754,Philadelphia F.
+755,Internapoli
+756,Mainz 05 U17
+757,Mieszko Gniezno
+758,Exeter City
+759,Vancouver 86ers
+760,Chemnitz Yth.
+761,A. Aachen II 
+762,Angelana
+763,JS Kabylie
+764,Xerxes/DHC
+765,Ohod Club
+766,Hajduk U17
+767,Mansfield Town
+768,Ashington AFC
+769,Sparta
+770,Lecco
+771,Mainz 05 U19
+772,Sparta Brodnica
+773,Furman Paladins
+774,Mjällby AIF
+775,Lubuszanin Drezdenko
+776,Loko Sofia
+777,SVA Bockum-H.
+778,Eintracht Hamm
+779,Ludwigs. SC U17
+780,Eisenstadt
+781,A. Klagenfurt
+782,Shakhtar D.
+783,Selangor FC
+784,Heßler 06 Yth.
+785,Chemie Halle
+786,Goczalkowice
+787,Volendam
+788,Casino Baden
+789,Vard
+790,Man City U18
+791,Sparta Praha
+792,Paris-Neuilly
+793,Zaglebie Lubin
+794,Blois Foot 41
+795,Volendam U19
+796,PSV Klagenfurt
+797,Cádiz CF
+798,SV St. Veit
+799,Leverkusen II
+800,Dorchester
+801,Nordstern BS
+802,Rochester Rhinos
+803,Alem. Aachen
+804,Germ. Wiesbaden
+805,Zwolsche Boys
+806,CD Málaga
+807,VfL Bochum U17
+808,RFC Tilleur
+809,SSV Buer Yth.
+810,Massese
+811,DS'79
+812,Daring Club
+813,London City
+814,Lusitano FC
+815,Gwarek U19
+816,Ternana
+817,Cisco Roma
+818,CD Condal
+819,VfL Bochum U19
+820,St. Pauli U19
+821,Corinthians U20
+822,M. Petah Tikva
+823,Norwich Yth.
+824,Norwich U18
+825,CZ Jena U17
+826,FC Carl Zeiss Je
+827,Ceará SC
+828,XV de Jaú
+829,Anderlecht U21
+830,KS Samara
+831,H. Beer Sheva
+832,Las Palmas B
+833,PAE Veria
+834,Vyzas Megaron
+835,M. Tel Aviv
+836,HN Jianye
+837,Standard U17
+838,APOP Kinyras
+839,Leher TS Jgd.
+840,RW Cuxh. U17
+841,Skoda Xanthi
+842,Pol. Warsaw
+843,RW Cuxh. U19
+844,Teramo
+845,Renato Curi Ang
+846,CS Emelec
+847,Bremerhaven U19
+848,Irapuato
+849,TuS Koblenz
+850,Deportivo Quito
+851,KV Kortrijk
+852,Stade Lavallois
+853,Yokohama F. M.
+854,Chelsea Res.
+855,SD Huesca
+856,FC Cartagena
+857,Ostbahn XI
+858,Dunakeszi
+859,Budapesti VSC
+860,Miami Fusion
+861,Junior FC
+862,Indep. Medellín
+863,Deportivo Cali
+864,SV Weiden 14/75
+865,Sunderland U18
+866,Al-Ettifaq
+867,Amiens SC
+868,Oberneul. Yth.
+869,Besançon RC
+870,Wolfsburg U17
+871,Wolfsburg U19
+872,Bursaspor
+873,Sakaryaspor
+874,Vienna Yth.
+875,Dorados Sinaloa
+876,Al-Ahli SC
+877,Barcelona Prom.
+878,FAC Youth
+879,Barça U18
+880,FC Porto U17
+881,FC Twente U19
+882,RC Liège
+883,Yokohama FC
+884,G. Ober-Roden
+885,Mauaense
+886,Western Sydney
+887,GC Zürich U18
+888,W. Bremen II
+889,FC Vilafranca
+890,TuS Dassendorf
+891,Zenit Leningrad
+892,Howard Bison
+893,Banbury
+894,Hastings Utd
+895,Dallas
+896,Chapecoense
+897,Budapesti Vasas 
+898,Locomotiva B.
+899,Portuguesa
+900,Wismut K.-M.-St.
+901,Bridgnorth Town FC
+902,BSG Gera-Süd
+903,San Diego Toros
+904,Lyn
+905,Radnicki BG
+906,Martigny-Sports
+907,Strømsgodset
+908,Red Star ZH
+909,US Toulouse
+910,LASK
+911,Inter Bratislava
+912,FC Tokyo
+913,AFC Wimbledon
+914,Izmirspor
+915,Bognor Regis
+916,Fylkir
+917,KSV Urberach
+918,Septemvri pri CD
+919,Clairef. U17
+920,FC Metz U19
+921,Cambuur L.
+922,HSV III
+923,FC Zwolle
+924,St. Pölten Jgd
+925,St. Pölten U15
+926,St. Pölten U17
+927,DOS Kampen
+928,SC Interwetten
+929,Caracas FC
+930,Melk
+931,Le Mans FC B
+932,Kladno
+933,Örebro SK U19
+934,O Charleville
+935,Le Mans FC
+936,Real Avilés
+937,RCD Coruña
+938,La Louviere
+939,AS Aix
+940,Bata Zlin
+941,Qarabag FK
+942,SO Cholet
+943,Din. Zagreb U19
+944,FC Wien
+945,NK Lokomotiva
+946,Brentford
+947,Pezoporikos
+948,St-Étienne U19
+949,FCM Brasov
+950,Hassia Bingen
+951,Marseille B
+952,CD Revilla
+953,Rayo Cantabria
+954,Lanús
+955,Velke Mezirici
+956,CD Cruz Azul
+957,Aldosivi U20
+958,Wattenscheid 09
+959,Brasiliense-DF
+960,SE Gama
+961,América-SP
+962,Zehlendorf U17
+963,PAS Giannina
+964,Erbil SC
+965,Al-Wakrah SC
+966,Hertha BSC U17
+967,Al-Khor SC
+968,Hertha BSC U19
+969,BJ Renhe
+970,Renhe Reserve
+971,SW Frankenthal
+972,Al-Wahda
+973,Hoffenheim II
+974,Kirkuk FC
+975,Rákosmente
+976,Dunaújváros
+977,Lombard Pápa 
+978,CS Sfaxien
+979,Panetolikos
+980,Manchego
+981,AC Arles U19
+982,Panserraikos
+983,Campinense-PB
+984,Toluca U17
+985,Valle de Bravo
+986,Tepatitlán 
+987,Tlaxcala
+988,Leicester U18
+989,Graafschap Yth.
+990,KFC Uerdingen
+991,CQ Lifan
+992,Graafschap U17
+993,PSV U19
+994,De Graafschap
+995,E. Bamberg U17
+996,Nürnberg U19
+997,SCR Altach
+998,RC Lens B
+999,Getafe
+1000,C. Rizespor
+1001,MSV Duisburg
+1002,Sport Recife
+1003,A. Vienna Res.
+1004,TJ Tianhai
+1005,TJ Teda
+1006,Al Ahly
+1007,Verona U19
+1008,Asante Kotoko
+1009,Valenciennes FC
+1010,Torino FC Youth
+1011,Anorthosis
+1012,Svendborg fB
+1013,El Nacional U20
+1014,Recr. Huelva
+1015,Columbus
+1016,Rot Weiss Ahlen
+1017,Julius Berger FC
+1018,H. Kfar Saba
+1019,GZ R&F
+1020,RW Ahlen U19
+1021,FC Limonest
+1022,LR Ahlen U17
+1023,South China
+1024,Burton Albion
+1025,FC Istres
+1026,Scornicesti
+1027,FC National
+1028,Freiburg Yth.
+1029,TuS Pewsum
+1030,North Qld Fury
+1031,SC Freiburg U17
+1032,Newcastle Res.
+1033,Arm. Bielefeld
+1034,Marc. Stallions
+1035,Leverkusen U19
+1036,Quick Boys U19
+1037,Quick Boys
+1038,Leverkusen Yth.
+1039,Universitario
+1040,MLS Pro 40
+1041,AE Larisa
+1042,Memphis 901
+1043,Dep. Municipal
+1044,SSV Ulm U17
+1045,B. Saulgau Yth.
+1046,Athinaikos
+1047,Loko Moskau
+1048,Celta Turista
+1049,Messina Peloro
+1050,AC Siena
+1051,SV Zimmern Yth.
+1052,Cambridge Utd.
+1053,SV Zimmern U17
+1054,Valur
+1055,SC Freiburg II
+1056,Reading U18
+1057,FC 08 Villingen
+1058,FK Srem
+1059,Anderlecht Yth.
+1060,Bayonne
+1061,Karlsruhe Yth.
+1062,VfL Kirch. Yth.
+1063,Paris SG U19
+1064,Karlsruhe U17
+1065,Karlsruhe U19
+1066,Valencia U19
+1067,St Blazey
+1068,Djurgården
+1069,Heavy Transport
+1070,Hayes FC
+1071,Southall
+1072,Kolkata
+1073,Colchester Utd.
+1074,Muangthong Utd.
+1075,AS Arta/Solar7
+1076,Rennes U19
+1077,BSV Al-Ders. II
+1078,Daegu FC
+1079,SC Paderborn
+1080,CD Acero
+1081,SC Bastia B
+1082,G. Bordeaux B
+1083,Benevento
+1084,Esteghlal FC 
+1085,Persepolis
+1086,Accrington
+1087,Écija Balompié
+1088,CF Estrela 
+1089,Belenenses
+1090,Krasnodar
+1091,Germinal Ekeren
+1092,VAC Beerschot
+1093,Kilmarnock FC
+1094,Montpellier U19
+1095,St. Johnstone
+1096,Pescara
+1097,FC Twente U21
+1098,Karagümrük
+1099,Kocaelispor
+1100,JGA Nevers
+1101,AS Beaune
+1102,Ümraniyespor
+1103,Racing Besançon
+1104,Standard U21
+1105,SD Luneng
+1106,Oberndorf
+1107,Mikkelin
+1108,SV Sachsenburg
+1109,Deportivo Gijón
+1110,Fortuna Köln
+1111,FK Cukaricki
+1112,FC Bremerhaven
+1113,Cork City
+1114,CS Thonon
+1115,NEC
+1116,NEC U19
+1117,Minnesota Kicks
+1118,Skelmersdale
+1119,Marítimo
+1120,Paysandu
+1121,KPT-85
+1122,Taubaté
+1123,Neret. Metkovic
+1124,Tiverton
+1125,Rizespor
+1126,Stafford Rangers
+1127,Tijuana Jgd.
+1128,Aschaffenburg
+1129,60 Aschaffenb.
+1130,LOSC Lille B
+1131,Baldock Town
+1132,Vannes
+1133,Rot-Weiß Lüdenscheid
+1134,FC Steaua U19
+1135,Venados II
+1136,Progreso
+1137,Tapatíos
+1138,Atlas U17
+1139,Troyes
+1140,Tijuana U17
+1141,PSV SW Salzburg
+1142,Ethnikos
+1143,Olympiakos N.
+1144,Kukmirn
+1145,TuS Rüssingen
+1146,Augsburg-O.
+1147,ATSV Wattenheim
+1148,K'lautern U17
+1149,VfL Bochum Yth.
+1150,FC Basel U18
+1151,Real Madrid Dep.
+1152,APO Levadiakos
+1153,Halberst. Yth.
+1154,Barça Amat.
+1155,Halberstadt U17
+1156,Großklein
+1157,Bad Gleichenb.
+1158,Halberstadt U19
+1159,Drøbak-Frogn
+1160,Energie Cottbus
+1161,Blankenb. FV
+1162,Everton Res.
+1163,Hartberg II
+1164,Bad Aussee
+1165,Vöcklabruck
+1166,Anger
+1167,ASK Köflach
+1168,Feldbach
+1169,Flavia Solva
+1170,SC V.-M. Yth.
+1171,W. Bremen U19
+1172,AS Cannes U17
+1173,TSG Eisenberg
+1174,Frigg
+1175,Apol. Kalamarias
+1176,Ay-Yildizspor
+1177,VPS
+1178,Flamurtari FC
+1179,FK Partizani
+1180,Dulwich Hamlet
+1181,Istanbulspor
+1182,Samsunspor
+1183,IFK Hässleholm
+1184,CD Pesquero
+1185,Alianza Lima
+1186,Graesrödderne
+1187,Eastleigh
+1188,FC Guernsey
+1189,Pohronie
+1190,EA Guingamp B
+1191,SG Mettlach U17
+1192,Trasandino
+1193,W. Mannheim U19
+1194,Memmingen Yth.
+1195,Thannhausen Jgd
+1196,TSV 1860 U17
+1197,TSV 1860 U19
+1198,W. Mannheim U17
+1199,AS Cherbourg
+1200,Lambsheim U17
+1201,St.Truiden U21
+1202,SSV Bachem Yth.
+1203,FavAC
+1204,Mettlach Yth.
+1205,Tre Penne
+1206,Mendrisiostar
+1207,SF Larrelt
+1208,Rot-Weiss Essen 
+1209,Chelsea Youth
+1210,Rosenheim Yth.
+1211,Clairef. Yth.
+1212,Monaco Youth
+1213,T. Schalke Yth.
+1214,Falke Ge. Yth.
+1215,RW Essen U17
+1216,AC Venezia 1907
+1217,Feyenoord Youth
+1218,Feyenoord U17
+1219,Feyenoord U19
+1220,Chemnitz U17
+1221,Chemnitz U19
+1222,Chemnitz II
+1223,H. Rostock Yth.
+1224,Prato Youth
+1225,Arsenal Youth
+1226,FC Baar
+1227,River Plate U20
+1228,Hombr. SV Yth.
+1229,B. Dortmund U19
+1230,VV Noordwijk Yo
+1231,Noordwijk
+1232,Minnesota Thunder
+1233,FC Zug
+1234,Santa Lucia
+1235,Toulouse B
+1236,Offenbach U19
+1237,Kaposvár
+1238,Soroksári VOSE
+1239,Repülő SC
+1240,Plymouth
+1241,Chemnitzer FC
+1242,Rovers FC Youth
+1243,Man Utd Youth
+1244,FBK Balkan
+1245,FC Den Bosch
+1246,Indep'te II
+1247,Volgar
+1248,Olymp. Lyon U17
+1249,Real Madrid U19
+1250,CD Leganés
+1251,Malmö FF U17
+1252,Den Bosch U17
+1253,Malmö FF U19
+1254,Vannes U17
+1255,Levallois SC
+1256,Le Mans UC 72 B
+1257,Le Mans UC 72
+1258,Arizona United
+1259,Den Bosch U19
+1260,Groningen U19
+1261,Watford Yth.
+1262,Vikt. Plzen U19
+1263,SC Bastia U19
+1264,Milan U19
+1265,Al-Qadsiah
+1266,Danubio FC
+1267,LOSC Lille Yth.
+1268,LOSC Lille U19
+1269,Chmel Blsany
+1270,Groningen U17
+1271,Brescia U17
+1272,Brescia U19
+1273,Ent. Mel-Font
+1274,QD Huanghai
+1275,KRC Genk Youth
+1276,Arsenal U18
+1277,K'lautern II
+1278,FC 08 Homburg
+1279,FC Homburg II
+1280,Marsonia U19
+1281,Cobreloa
+1282,Hudiksvalls FF
+1283,El Mokawloon
+1284,1.FC Köln U19
+1285,Nuorese
+1286,Torres
+1287,Zeljeznicar SB
+1288,Lumezzane
+1289,Rockmount AFC
+1290,Cobh Ramblers
+1291,Envigado
+1292,Banfield II
+1293,RS Futebol
+1294,AS Excelsior
+1295,Monza
+1296,Jamshedpur FC
+1297,SG Blaubach-Diedelkopf
+1298,IFK Stockholm
+1299,Erkenschwick
+1300,Wuppertaler SV
+1301,Catania
+1302,Tasmania Berlin
+1303,Chicago Spurs
+1304,AIK U19
+1305,Melbourne Heart
+1306,HZ Greentown
+1307,Quimper FC
+1308,Red Star U19
+1309,Spartak
+1310,LB Châteauroux U19
+1311,Wadi Degla 
+1312,Differdange 03
+1313,Cremonese
+1314,Stade Reims B
+1315,Man. Howrah
+1316,Usti nad Labem
+1317,Conwy
+1318,Winsford
+1319,Southend United
+1320,Rhyl
+1321,Dag & Red FC
+1322,Greenwich
+1323,AZ Alkmaar
+1324,CABJ U20
+1325,Neerlandia/SLTO
+1326,Campomaiorense
+1327,Boavista
+1328,RB Salzburg
+1329,Blaubach-D. U17
+1330,SG Blaubach-Diedelkopf U19
+1331,FK Sabail
+1332,Kitchee
+1333,Indep'te U20
+1334,Siegburger SV
+1335,Fleetwood
+1336,Halifax Town
+1337,Stocksbridge
+1338,FC Baniyas
+1339,AS Monaco C
+1340,Platense
+1341,Kumu
+1342,AC Semassi FC
+1343,Olimpia
+1344,SM Caen U19
+1345,Stal Mielec
+1346,TB Rowdies
+1347,SW Essen U19
+1348,Everton U18
+1349,Lisburn FC
+1350,Frankfurt U19
+1351,Cynthia
+1352,Aris Limassol
+1353,INF Vichy
+1354,Lège Cap-Ferret
+1355,FC Bassin d'Arcachon
+1356,Biganos
+1357,Skoda Plzen U19
+1358,NK Zadar U17
+1359,Comarca Níjar
+1360,Zrinjski Mostar
+1361,Inter Zapresic
+1362,San Michele
+1363,Juventus U17
+1364,Juventus U19
+1365,Kispesti FC
+1366,Vorwärts Steyr
+1367,CD Vera
+1368,Kashiwa Reysol
+1369,Adelaide United
+1370,Azovets Mariupol
+1371,Invincible 11
+1372,Africa Sports
+1373,Al-Jazira
+1374,CDF Vial
+1375,Miami FC
+1376,Bengal Tuskers
+1377,Tigers Kuala Lumpur
+1378,Tatran Teplice
+1379,Crossing Molenb.
+1380,Dunstable
+1381,Brisbane Lions
+1382,Nuneaton
+1383,Tobermore
+1384,Hebros
+1385,Delta Warszawa
+1386,América-MG
+1387,Myongji Uni
+1388,Toronto Croatia
+1389,Las Vegas Qu.
+1390,União de Tomar
+1391,New Jersey Am.
+1392,Nacional Yth.
+1393,Nacional U15
+1394,Kyoto P. Sanga
+1395,B. Minutemen
+1396,Hupyeong MS
+1397,Yukminkwan MS
+1398,Dongbuk MS
+1399,FC Seoul U18
+1400,Criciúma EC
+1401,Villa Nova
+1402,Monterrey
+1403,Smith Brothers
+1404,Legia II
+1405,Herning Fremad
+1406,Znicz Pruszkow
+1407,Vicenza Yth.
+1408,Santa Cruz-PE
+1409,Bunyodkor
+1410,Kabuscorp SC
+1411,San Antonio
+1412,Dynamo-2 Kyiv
+1413,Nördlingen
+1414,Haarlem II
+1415,H'aurach U17
+1416,H'aurach U19
+1417,1.FC H'aurach
+1418,Waterford Utd
+1419,Newcastle KB
+1420,Orange County
+1421,St. Kickers U19
+1422,St. Kickers U17
+1423,Chelmsford
+1424,SG Düren 99
+1425,Sockers
+1426,Boulogne U19
+1427,US Boulogne
+1428,Olympique Alès
+1429,Brentwood
+1430,Woodford Town
+1431,Barmbek-U. U19
+1432,Atl. Madrid U17
+1433,Sagan Tosu
+1434,Gladsaxe-Hero BK
+1435,Hvidovre
+1436,Messina
+1437,Madureira
+1438,Real Sociedad Y
+1439,Barmbek-U. U17
+1440,S. Kickers Yth.
+1441,Léopard de D.
+1442,Luqueño
+1443,Guaraní
+1444,San Lorenzo
+1445,Shelbourne
+1446,Elgin City
+1447,Reipas
+1448,Putra Samarinda
+1449,Boston Utd
+1450,Durban City
+1451,Wealdstone
+1452,Zel. Prostejov
+1453,RH Brno
+1454,Spartak Brno
+1455,Gansu Tianma
+1456,Tiburones Rojos
+1457,Ambrosiana
+1458,Kaizer Chiefs
+1459,Farul U19
+1460,RFC Brugeois
+1461,Portland
+1462,NK Osijek
+1463,FC Martigues
+1464,Vanlöse IF
+1465,Chester FC
+1466,Farul Constanta
+1467,Portuguesa FC
+1468,Sportul S.
+1469,Italiano U20
+1470,Hereford Utd.
+1471,Merthyr Tydfil
+1472,Versailles Yth.
+1473,Celtic U20
+1474,Legnano
+1475,Domegliara
+1476,Catanzaro
+1477,Wiener AC
+1478,Meidericher SV
+1479,SC Enschede
+1480,SF Katernberg
+1481,SC Oelde 09
+1482,Yokohama Flüg.
+1483,SC Toulon
+1484,Cassis Carnoux
+1485,SO Caillolais
+1486,AD 9 de Octubre
+1487,Wilstermann 
+1488,Nacional-AM
+1489,Fast
+1490,Noroeste
+1491,Granada CF
+1492,Sparta U19
+1493,Ayr United
+1494,Racing Club U20
+1495,Värnamo
+1496,Skogens
+1497,Fässbergs IF
+1498,IK Oddevold
+1499,Ankaragücü
+1500,Lok. Kosice
+1501,Wizards
+1502,Ferro
+1503,Roma U19
+1504,RW Knittelfeld
+1505,Segesta Sisak
+1506,QD E. Hainiu
+1507,Medjimurje
+1508,ZJ Greentown
+1509,Coleraine
+1510,Okwawu United
+1511,SV Kapfenberg
+1512,Gorleston
+1513,Hyères FC
+1514,Volga Gorkiy
+1515,Utrera
+1516,Arges Dacia Pit.
+1517,Petrolul
+1518,ASA Tg. Mures
+1519,Dozamet N.S.
+1520,BW Berlin
+1521,BKS Stal Bielsko-Biala
+1522,Odra Opole
+1523,PEC Zwolle '82
+1524,Vianense S15
+1525,Braga U19
+1526,HB CFFC
+1527,NK Novalja
+1528,FC Koper
+1529,Gloria Buzau
+1530,Boca Juniors II
+1531,Wiesendorf
+1532,Motor Zwickau
+1533,Köge BK
+1534,Olhanense
+1535,Leiria
+1536,Rio Ave
+1537,Victoria Yth.
+1538,Bohemians CKD
+1539,SC Victoria U17
+1540,SC Victoria U19
+1541,B.1901
+1542,TJ Gottwaldov
+1543,Darmstadt 98
+1544,Amaliendorf
+1545,Hohenau
+1546,Al-Shamal SC
+1547,Radnik Sesvete
+1548,Eindhoven
+1549,Pelkum U17
+1550,1.FC Pelkum U19
+1551,Germania Hamm
+1552,Hammer SpVg
+1553,Apollon Athens
+1554,Helmond Sport
+1555,Ilicitano
+1556,MTK Budapest
+1557,Elche CF
+1558,CF Oaxtepec
+1559,HNK Sibenik
+1560,ASK Klagenfurt
+1561,DSG Sele/Zell
+1562,Olbia
+1563,Debrecen
+1564,Sparta R.
+1565,Go Ahead
+1566,Electr. Craiova
+1567,Altrincham
+1568,Garforth Town
+1569,Herfölge BK
+1570,SCC Berlin
+1571,Vallauris
+1572,Vauban S.
+1573,SC Zwiesel Jgd.
+1574,Headington Utd
+1575,SC Zwiesel U17
+1576,SC Zwiesel U19
+1577,Häcken
+1578,Dinamo U18
+1579,Jiul Petroșani
+1580,Corvinul Hd.
+1581,Wycombe
+1582,CDNA
+1583,Ajax U18
+1584,FV Biebrich 02
+1585,East Fife
+1586,Home Farm
+1587,IFK Holmsund
+1588,Arezzo
+1589,APIA Leichhardt
+1590,NK Maribor
+1591,Pr. Münster
+1592,Reyfra
+1593,Cape Town Spurs
+1594,UCD
+1595,Whitby
+1596,Hapoel Haifa
+1597,Diósgyőr
+1598,Pécsi MFC
+1599,SKVO
+1600,Worcester City
+1601,San Fernando CD
+1602,FC Glarus
+1603,Marles Hise
+1604,Repesenses S17
+1605,FC Sopron
+1606,CSKA-Borysfen
+1607,Dnipro
+1608,Panionios
+1609,VTJ Zatec
+1610,Mallorca
+1611,EPSV Gmünd
+1612,SC Nagelberg
+1613,Béziers DFC
+1614,Mulhouse S-A
+1615,Petrzalka
+1616,Mönchhof
+1617,Persita
+1618,R. Valladolid B
+1619,Johor DT
+1620,Toronto Falcons
+1621,Pro Patria
+1622,ŠK Bratislava
+1623,Raith Rovers
+1624,NAC Breda
+1625,RBC
+1626,Sharks FC
+1627,Calabar Rovers
+1628,Bella Vista
+1629,Bellm. Hiratsuka
+1630,OFI Crete FC
+1631,Carpentras
+1632,FC Nancy
+1633,AO Kavala
+1634,Sport Club Bacău
+1635,Unirea Urziceni
+1636,Brest B
+1637,Palmeiras U20
+1638,Zenit 2 S-Pb
+1639,Kairat Almaty
+1640,FC Empoli
+1641,Fiorenzuola
+1642,AS Lodigiani
+1643,Palmeiras U17
+1644,Cruzeiro U20
+1645,Latina
+1646,Ceará U20
+1647,Anápolis
+1648,Groningen U21
+1649,Bregenz/Bludenz
+1650,Newry City
+1651,Beringen FC
+1652,Telford United
+1653,Bayer 05 U19
+1654,BJ Guoan
+1655,Willem II U19
+1656,CA Cerro
+1657,Porongos
+1658,Mlada Boleslav
+1659,Vigantice
+1660,Willem II Youth
+1661,Willem II U17
+1662,FC Groning. U21
+1663,São Roque
+1664,Santa Clara U19
+1665,Santa Clara
+1666,Operário Lagoa
+1667,Angrense
+1668,Micaelense
+1669,Estoril Praia
+1670,Al-Shabab
+1671,Wacker Wien
+1672,CS Fola Esch
+1673,FC Kosova GE
+1674,Anag. Karditsas
+1675,Haladás
+1676,FC Botosani
+1677,Caslav
+1678,Blansko
+1679,Champel
+1680,Dorog
+1681,PAO Chicago
+1682,Gamma FC
+1683,Radnicki Nis
+1684,Saint-Dizier
+1685,FC Midtjylland
+1686,Esbjerg fB
+1687,Barça Atlètic
+1688,Ilysiakos
+1689,Yverdon Sport
+1690,SV Epe
+1691,Högaborgs BK
+1692,NorthEast Utd.
+1693,Legon Cities FC
+1694,Real SC U155
+1695,Real SC U17
+1696,Venezia
+1697,Estrela Amadora
+1698,SC Toulon U19
+1699,Nîmes Ol. U19
+1700,SC Toulon Var
+1701,Brest Armorique
+1702,Amarante U15
+1703,Amarante Sub-17
+1704,Amarante U19
+1705,Leça
+1706,Santa Ana CF
+1707,Castellón
+1708,Sliven
+1709,Hrv Dragovoljac
+1710,Extremadura
+1711,Sporting Yth.
+1712,KAA Gent
+1713,KFC Strombeek
+1714,Flamengo B
+1715,Real Oviedo
+1716,JEF Utd Ichihara
+1717,Córdoba CF
+1718,Brummel Sendai
+1719,FC Salzburg
+1720,SR Donaufeld
+1721,Kottingbrunn
+1722,Eintracht Wels
+1723,FC Zeltweg
+1724,XJ T. Leopard
+1725,Sevilla FC U19
+1726,VVS Sofia
+1727,CD América
+1728,Racing Jet
+1729,Vasas Izzó
+1730,Dukla Pardubice
+1731,Spartak Praha
+1732,Turnov
+1733,Zlicin
+1734,ARA Gent
+1735,Nankatsu SC
+1736,KAA Gent U17
+1737,Bilbao Athletic
+1738,Alavés
+1739,Ross County
+1740,C'dole Sapporo
+1741,SC Sagamihara
+1742,Dynamo M II
+1743,Dinamo Ts.
+1744,Toros Neza
+1745,Lazio U19
+1746,Sivasspor
+1747,Ipswich U18
+1748,KAS Eupen
+1749,Worksop
+1750,Lazio U17
+1751,Lazio U18 
+1752,Chennaiyin FC
+1753,Slask Wroclaw
+1754,San Marco J
+1755,Asti
+1756,Piast Gliwice
+1757,Stade Quimper
+1758,Philadel. KiXX
+1759,Eastern
+1760,GZ Evergrande
+1761,BSV Schwenningen
+1762,BC Augsburg
+1763,Sona
+1764,Toronto Italia
+1765,Botev Plovdiv
+1766,Olympique
+1767,AC Amager A U19
+1768,ES Malley
+1769,ES Malley II
+1770,Team Vaud U18
+1771,Team Vaud U16
+1772,Fafe
+1773,CD Toledo
+1774,Kispesti AC
+1775,Inter B
+1776,Beerschot VAV
+1777,Shimizu S-Pulse
