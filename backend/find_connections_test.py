@@ -62,7 +62,7 @@ def get_path(graph, path):
     res = []
     for u, v, data in edge_info:
         teams_str = ', '.join(list(data.keys()))
-        res.append(f"From {graph.nodes[u]['name']} to {graph.nodes[v]['name']}: Team = {teams_str}")
+        res.append({"from": graph.nodes[u]['name'], "to": graph.nodes[v]['name'], "teams": teams_str})
     return res
 
 def is_valid_path(graph, players_to_id, path):
