@@ -138,6 +138,7 @@ function App() {
         Find Connections
         </button>
       </form>
+      <section>
       {error && <div className="error-message">{error}</div>}
       <div className="results">
         {result.map((line, index) => (
@@ -145,7 +146,7 @@ function App() {
             {`${line.from} and ${line.to} played on ${line.teams}`}
             </p>
         ))}
-        </div>
+        </div></section>
     </div>
   );
 }

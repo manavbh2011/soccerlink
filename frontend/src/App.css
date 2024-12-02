@@ -32,8 +32,9 @@ body {
   .form-container {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Horizontal spacing between input boxes */
+    gap: 30px; /* Horizontal spacing between input boxes */
     margin-bottom: 10px; /* Space between inputs and results */
+    height: 40px;
   }
   
   .input-container {
