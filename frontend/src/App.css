@@ -33,9 +33,13 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px; /* Horizontal spacing between input boxes */
-    margin-bottom: 20px; /* Space between inputs and results */
+    margin-bottom: 10px; /* Space between inputs and results */
   }
   
+  .input-container {
+    position: relative;
+  }
+
   .input-label {
     display: inline-block;
     font-size: 16px;
@@ -50,9 +54,29 @@ body {
     border: 1px solid #042D63;
     border-radius: 5px;
     width: 200px;
-    /*margin-bottom: 20px;*/
+    margin-bottom: 20px;
+  }
+
+  .suggestions-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    position: absolute;
+    width: 100%; /* Match the input field's width */
+    z-index: 1000;
   }
   
+  .suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .suggestion-item:hover {
+    background-color: #f0f0f0;
+  }
   /* Submit button styling */
   .submit-button {
     padding: 10px 20px;

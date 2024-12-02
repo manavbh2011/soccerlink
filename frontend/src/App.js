@@ -7,9 +7,30 @@ function App() {
   const [input2, setInput2] = useState("");
   const [result, setResult] = useState([]);
   const [error, setError] = useState(null)
+  const [suggestions1, setSuggestions1] = useState([]);
+  const [suggestions2, setSuggestions2] = useState([]);
+
+  const fetchSuggestions = async (input, setSuggestions) => {
+    if (input.trim() === "") {
+      setSuggestions([]);
+      return;
+    }
+    try {
+      const response = await axios.post("http://127.0.0.1:3001/api/suggest-players", {
+        query: input
+      });
+      console.log("Suggestions", response);
+      setSuggestions(response.data);
+    } catch (err) {
+      console.error("Error fetching suggestions:", err);
+    }
+  };
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log("Form submitted!");
+    setSuggestions1([]);
+    setSuggestions2([]);
     try {
       const response = await axios.post("http://127.0.0.1:3001/api/find-connections", {
         input1: input1,
@@ -25,7 +46,12 @@ function App() {
         if (!response.data.result) {
             setError("One or both player names were typed incorrectly or not found in the database.");
             setResult([]);
-        } else {
+        }
+        else if ("error" in response.data.result) {
+            setError(`No connections exist between ${input1} and ${input2}`);
+            setResult([]);
+        }
+        else {
             setResult(response.data.result);
             setError([]);
             } // Update result from the server response
@@ -36,6 +62,18 @@ function App() {
 
     }
   };
+  
+  const handleInputChange = (e, setInput, setSuggestions) => {
+    const value = e.target.value;
+    setInput(value);
+    fetchSuggestions(value, setSuggestions);
+  };
+
+  const handleSuggestionClick = (name, setInput, setSuggestions) => {
+    setInput(name);
+    setSuggestions([]);
+  };
+
   return (
     <div className="App">
       <header><h1 className="title" aria-label="Title: SoccerLink">SoccerLink</h1></header>
@@ -48,10 +86,23 @@ function App() {
             type="text"
             id="player1"
             value={input1}
-            onChange={(e) => setInput1(e.target.value)}
+            onChange={(e) => handleInputChange(e, setInput1, setSuggestions1)}
             className="input-box"
             aria-labelledby="player1"
         />
+        {suggestions1.length > 0 && (
+            <ul className="suggestions-list">
+              {suggestions1.map((name, index) => (
+                <li
+                  key={index}
+                  className="suggestion-item"
+                  onClick={() => handleSuggestionClick(name, setInput1, setSuggestions1)}
+                >
+                  {name}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
         
         <div className="input-container">
@@ -60,10 +111,23 @@ function App() {
             type="text"
             id="player2"
             value={input2}
-            onChange={(e) => setInput2(e.target.value)}
+            onChange={(e) => handleInputChange(e, setInput2, setSuggestions2)}
             className="input-box"
             aria-labelledby="player2"
         />
+        {suggestions2.length > 0 && (
+            <ul className="suggestions-list">
+              {suggestions2.map((name, index) => (
+                <li
+                  key={index}
+                  className="suggestion-item"
+                  onClick={() => handleSuggestionClick(name, setInput2, setSuggestions2)}
+                >
+                  {name}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
         
         <button 

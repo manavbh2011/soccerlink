@@ -8,7 +8,8 @@ def remove_accents(input_string):
 
 def read_into_dict(file):
     res = {}
-    with open(file, 'r') as f:
+    file_path = os.path.join(os.path.dirname(__file__), file)
+    with open(file_path, 'r') as f:
         reader = csv.reader(f)
         next(reader)
         for row in reader:
@@ -75,6 +76,11 @@ def is_valid_path(graph, players_to_id, path):
 def names_to_id(graph):
     return {graph.nodes[node]["name"]:node for node in graph.nodes}
 
+def suggest_players(query):
+    players = read_into_dict("players_medium.csv").values()
+    matches = [names for names in players if query.lower() in names.lower()]
+    return matches[:6] if matches else []
+
 def dump_graph(folder_file_path):
     players = read_into_dict('players_medium.csv')
     teams = read_into_dict('teams_medium.csv')
@@ -105,40 +111,9 @@ def find_connections(player1, player2, newGraph=True):
     try:
         path = nx.shortest_path(graph, source=names_to_id_dict[player1], target=names_to_id_dict[player2])
         return get_path(graph, path)
-    except: return f"No connections exist between {player1} and {player2}."
-
-# def play_game():
-#     players = read_into_dict('players.csv')
-#     teams = read_into_dict('teams.csv')
-#     players_and_teams = read_into_dict('players_and_teams.csv')
-#     player1 = input("Choose the first player: ")
-#     if player1 not in players.values(): 
-#         print(f"{player1} not in database.")
-#         return
-#     player2 = input("Choose the second player: ")
-#     if player2 not in players.values(): 
-#         print(f"{player2} not in database.")
-#         return
-#     players_to_id = {v: k for k, v in players.items()}
-#     graph = process_data_into_graph(players, teams, players_and_teams)
-#     game_mode = input("Select the mode:\n1. Print the shortest path between two players.\n2. Provide a path between the two players.\n")
-#     if game_mode=='1':
-#         try:
-#             path = nx.shortest_path(graph, source=players_to_id[player1], target=players_to_id[player2])
-#             print_path_clean(graph, path)
-#         except: print(f"No connections exist between {player1} and {player2}.")
-#     elif game_mode=='2':
-#         input_path = input("List the players that form a path between players 1 and 2, including those two players. Separate players by a \", \": ")
-#         input_path = input_path.split(", ")
-#         for name in input_path:
-#             if name not in players.values(): 
-#                 print("1 or more players entered are not in the database")
-#                 return
-#         else:
-#             if is_valid_path(graph, players_to_id, input_path): print("These connections are valid!")
-#             else: print("These connections are invalid.")
-#     else: print("Valid game mode not entered. Game restarting...")
+    except: return {"error": "No connections exist between {player1} and {player2}."}
 
 if __name__ == "__main__":
     #play_game()
-    print(find_connections("Peter Crouch", "Lionel Messi", newGraph=False))
+    #print(find_connections("Peter Crouch", "Lionel Messi", newGraph=False))
+    print(suggest_players("Ron"))
