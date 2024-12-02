@@ -15,14 +15,21 @@ function App() {
         input1: input1,
         input2: input2
       });
-      console.log(response.data);
-      if (!response.data.result) {
-        setError("One or both player names were typed incorrectly or not found in the database.");
+      if (input1.trim()===input2.trim()) {
+        setError("Enter two different players");
         setResult([]);
-      } else {
-        setResult(response.data.result);
-        setError([]);
-        } // Update result from the server response
+        console.log("check")
+      }
+      else {
+        console.log(response.data);
+        if (!response.data.result) {
+            setError("One or both player names were typed incorrectly or not found in the database.");
+            setResult([]);
+        } else {
+            setResult(response.data.result);
+            setError([]);
+            } // Update result from the server response
+        }
     } catch (error) {
       setError(`An error occurred: ${error.message}`);
       setResult([]);
@@ -32,6 +39,8 @@ function App() {
   return (
     <div className="App">
       <header><h1 className="title" aria-label="Title: SoccerLink">SoccerLink</h1></header>
+      <p className="subheading" aria-label="Subheading: how to use SoccerLink">
+      Enter the names of two soccer players to find their connections through their club teammates.</p>
       <form className="form-container" onSubmit={handleSubmit}>
         <div className="input-container">
         <label htmlFor="player1" className="input-label">Player 1:</label>
