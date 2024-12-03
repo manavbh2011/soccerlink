@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import './App.css';
+/*import GraphBackground from "./GraphBackground";*/
 
 function App() {
   const [input1, setInput1] = useState("");
@@ -76,6 +77,7 @@ function App() {
 
   return (
     <div className="App">
+      {/*<GraphBackground />*/}
       <header><h1 className="title" aria-label="Title: SoccerLink">SoccerLink</h1></header>
       <p className="subheading" aria-label="Subheading: how to use SoccerLink">
       Enter the names of two soccer players to find their connections through their club teammates.</p>
