@@ -119,6 +119,6 @@ body {
     font-weight: bold;
   }
 
-  .graph-background-svg {
-    pointer-events: none; /* Allows clicks to pass through to underlying elements */
-  }
+  /*.graph-background-svg {
+    pointer-events: none; Allows clicks to pass through to underlying elements
+  }*/
