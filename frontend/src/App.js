@@ -145,7 +145,7 @@ function App() {
       <div className="results">
         {result.map((line, index) => (
             <p key={index} className="result-line">
-            {`${line.from} and ${line.to} played on ${line.teams}`}
+            {`${line.from} and ${line.to} played together on ${line.teams}`}
             </p>
         ))}
         </div></section>
