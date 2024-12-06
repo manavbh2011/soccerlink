@@ -29,11 +29,16 @@ def process_data_into_graph(players, teams, players_and_teams):
             G.add_node(player_id, name=player_name, teams=[team_dict])
         else: 
             G.nodes[player_id]["teams"].append(team_dict)
+    print(len(G))
     return add_connections(G)
 
 def add_connections(graph):
+    num_computations = 0
+    half_graph = list(graph.nodes)[:len(graph.nodes)//2]
     for node1 in graph.nodes:
-        for node2 in graph.nodes:
+        for node2 in half_graph:
+            num_computations+=1
+            if num_computations%1000000==0: print(f"Computation: {num_computations}: {graph.nodes[node1]["name"]} and {graph.nodes[node2]["name"]}")
             if node1==node2: continue
             teams = common_teams(graph, node1, node2)
             for team in teams:
@@ -77,14 +82,14 @@ def names_to_id(graph):
     return {graph.nodes[node]["name"]:node for node in graph.nodes}
 
 def suggest_players(query):
-    players = read_into_dict("players_medium.csv").values()
+    players = read_into_dict("players_large.csv").values()
     matches = [names for names in players if query.lower() in names.lower()]
     return matches[:6] if matches else []
 
 def dump_graph(folder_file_path):
-    players = read_into_dict('players_medium.csv')
-    teams = read_into_dict('teams_medium.csv')
-    players_and_teams = read_into_dict('players_and_teams_medium.csv')
+    players = read_into_dict('players_large.csv')
+    teams = read_into_dict('teams_large.csv')
+    players_and_teams = read_into_dict('players_and_teams_large.csv')
     graph = process_data_into_graph(players, teams, players_and_teams)
     file_path = f"{folder_file_path}graph_{datetime.now().timestamp()}.gpickle"
     with open(file_path, 'wb') as f:
@@ -94,7 +99,8 @@ def find_connections(player1, player2, newGraph=True):
     folder_file_path = os.path.dirname(os.path.abspath(__file__))+"/graphs/"
     if newGraph:
         dump_graph(folder_file_path)
-    file_path = folder_file_path+os.listdir(folder_file_path)[0]
+    file_path = folder_file_path+sorted(os.listdir(folder_file_path))[-2]
+    print(file_path)
     try:
         with open(file_path, 'rb') as f:
             graph = pickle.load(f)
@@ -111,9 +117,9 @@ def find_connections(player1, player2, newGraph=True):
     try:
         path = nx.shortest_path(graph, source=names_to_id_dict[player1], target=names_to_id_dict[player2])
         return get_path(graph, path)
-    except: return {"error": "No connections exist between {player1} and {player2}."}
+    except: return {f"error": "No connections exist between {player1} and {player2}."}
 
 if __name__ == "__main__":
     #play_game()
-    #print(find_connections("Peter Crouch", "Lionel Messi", newGraph=False))
-    print(suggest_players("Ron"))
+    print(find_connections("Erling Haaland", "Pele", newGraph=False))
+    #print(suggest_players("Ron"))
