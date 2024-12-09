@@ -18,7 +18,7 @@ function GraphBackground() {
         let svg = document.querySelector("article svg");
         graph.setOutput(svg).initSvgGraph();
         // Periodically update graph to create animation
-        const frameIntervalMs = 20;
+        const frameIntervalMs = 50;
         setInterval(() => {
             graph.stepFrame();
             graph.redrawOutput();
@@ -28,8 +28,8 @@ function GraphBackground() {
     function initInputHandlers(graph) {
         graph.idealNumNodes = 20;
         graph.extraEdgeProportion = 0.2;
-        graph.radiiWeightPower = 0.5;
-        graph.driftSpeed = 0.0001;
+        graph.radiiWeightPower = 1;
+        graph.driftSpeed = 0.001;
         graph.repulsionForce = 0.0000005;
     }
     /*---- Major graph classes ----*/
@@ -72,7 +72,7 @@ function GraphBackground() {
         updateNodes() {
             // Update each node's position, velocity, opacity. Remove fully transparent nodes.
             let newNodes = [];
-            let curIdealNumNodes = Math.min(Math.floor(this.frameNumber / 3), this.idealNumNodes);
+            let curIdealNumNodes = Math.min(Math.floor(this.frameNumber / 10), this.idealNumNodes);
             for (let node of this.nodes) {
                 // Move based on velocity
                 node.posX += node.velX * this.driftSpeed;
@@ -225,23 +225,39 @@ function GraphBackground() {
             let svg = this.svgElem;
             // Clear movable objects
             let gElem = svg.querySelector("g");
-            while (gElem.firstChild !== null)
-                gElem.removeChild(gElem.firstChild);
+            while (gElem.firstChild !== null) gElem.removeChild(gElem.firstChild);
+
             function createSvgElem(tag, attribs) {
                 let result = document.createElementNS(svg.namespaceURI, tag);
-                for (const key in attribs)
-                    result.setAttribute(key, attribs[key].toString());
+                for (const key in attribs) {
+                    if (attribs[key] === undefined || attribs[key] === null) {
+                        console.error(`Attribute '${key}' is undefined or null:`, attribs);
+                    } else {
+                        result.setAttribute(key, attribs[key].toString());
+                    }
+                }
                 return result;
             }
-            // Draw every node
+            // // Draw every node
             for (const node of this.nodes) {
-                gElem.append(createSvgElem("circle", {
-                    "cx": node.posX,
-                    "cy": node.posY,
-                    "r": node.radius,
-                    "fill": "rgba(129,139,197," + node.opacity.toFixed(3) + ")",
-                }));
+                let circle = gElem.querySelector(`circle[data-id="${node.id}"]`);
+                if (!circle) {
+                    circle = createSvgElem("circle", {
+                        "data-id": node.id,
+                        "r": node.radius,
+                    });
+                    gElem.appendChild(circle);
+                }
+                circle.setAttribute("cx", node.posX);
+                circle.setAttribute("cy", node.posY);
+                circle.setAttribute("fill", `rgba(129,139,197,${node.opacity.toFixed(3)})`);
             }
+            // Draw every edge
+            const edgeUpdateInterval = 10; // Adjust this value to control edge update frequency
+            if (this.frameNumber % edgeUpdateInterval === 0) {
+                this.edges.forEach(edge => edge.fade(this.fadeInPerFrame)); // Gradually make edges visible
+            }
+
             // Draw every edge
             for (const edge of this.edges) {
                 const a = edge.nodeA;
@@ -249,19 +265,20 @@ function GraphBackground() {
                 let dx = a.posX - b.posX;
                 let dy = a.posY - b.posY;
                 const mag = Math.hypot(dx, dy);
-                if (mag > a.radius + b.radius) { // Draw edge only if circles don't intersect
+                if (mag > a.radius + b.radius) {
                     dx /= mag; // Make (dx, dy) a unit vector, pointing from B to A
                     dy /= mag;
                     const opacity = Math.min(Math.min(a.opacity, b.opacity), edge.opacity);
-                    gElem.append(createSvgElem("line", {
-                        // Shorten the edge so that it only touches the circumference of each circle
-                        "x1": a.posX - dx * a.radius,
-                        "y1": a.posY - dy * a.radius,
-                        "x2": b.posX + dx * b.radius,
-                        "y2": b.posY + dy * b.radius,
-                        "stroke": "rgba(129,139,197," + opacity.toFixed(3) + ")",
-                        "stroke-width": "0.005",
-                    }));
+                    gElem.append(
+                        createSvgElem("line", {
+                            x1: a.posX - dx * a.radius,
+                            y1: a.posY - dy * a.radius,
+                            x2: b.posX + dx * b.radius,
+                            y2: b.posY + dy * b.radius,
+                            stroke: `rgba(129,139,197,${opacity.toFixed(3)})`,
+                            "stroke-width": "0.005",
+                        })
+                    );
                 }
             }
         }
