@@ -77,7 +77,7 @@ function App() {
 
   return (
     <div className="App">
-      <GraphBackground />
+      {/*<GraphBackground />*/}
       <header><h1 className="title" aria-label="Title: SoccerLink">SoccerLink</h1></header>
       <p className="subheading" aria-label="Subheading: how to use SoccerLink">
       Enter the names of two soccer players to find their connections through their club teammates.</p>

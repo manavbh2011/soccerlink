@@ -1,4 +1,4 @@
-import networkx as nx, csv, pickle, os, unicodedata
+import networkx as nx, csv, pickle, os, unicodedata, random
 from datetime import datetime
 
 def remove_accents(input_string):
@@ -115,8 +115,9 @@ def find_connections(player1, player2, newGraph=True):
         print(f"{player2} not in database.")
         return
     try:
-        path = nx.shortest_path(graph, source=names_to_id_dict[player1], target=names_to_id_dict[player2])
-        return get_path(graph, path)
+        paths = [p for p in nx.all_shortest_paths(graph, source=names_to_id_dict[player1], target=names_to_id_dict[player2])]
+        rand_path = random.choice(paths)
+        return get_path(graph, rand_path)
     except: return {f"error": "No connections exist between {player1} and {player2}."}
 
 if __name__ == "__main__":
