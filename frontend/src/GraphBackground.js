@@ -26,7 +26,7 @@ function GraphBackground() {
     }
     // Sets event handlers for form input elements, and sets configuration variables.
     function initInputHandlers(graph) {
-        graph.idealNumNodes = 20;
+        graph.idealNumNodes = 15;
         graph.extraEdgeProportion = 0.2;
         graph.radiiWeightPower = 1;
         graph.driftSpeed = 0.001;
@@ -91,7 +91,7 @@ function GraphBackground() {
             // Add new nodes to fade in
             while (newNodes.length < curIdealNumNodes) {
                 newNodes.push(new GNode(Math.random() * this.relWidth, Math.random() * this.relHeight, // Position X and Y
-                (Math.pow(Math.random(), 5) + 0.35) * 0.015, // Radius skewing toward smaller values
+                (Math.pow(Math.random(), 5) + 0.35) * 0.01, // Radius skewing toward smaller values
                 0.0, 0.0)); // Velocity
             }
             // Spread out nodes a bit
@@ -211,8 +211,8 @@ function GraphBackground() {
             let rectElem = svg.querySelector("rect");
             svg.setAttribute("width", this.relWidth.toString());
             svg.setAttribute("height", this.relHeight.toString());
-            svg.querySelectorAll("stop")[0].setAttribute("stop-color", "#575E85");
-            svg.querySelectorAll("stop")[1].setAttribute("stop-color", "#2E3145");
+            svg.querySelectorAll("stop")[0].setAttribute("stop-color", "#4c874f");
+            svg.querySelectorAll("stop")[1].setAttribute("stop-color", "#4c874f");
             return this;
         }
         initSvgGraph() {
@@ -250,7 +250,7 @@ function GraphBackground() {
                 }
                 circle.setAttribute("cx", node.posX);
                 circle.setAttribute("cy", node.posY);
-                circle.setAttribute("fill", `rgba(129,139,197,${node.opacity.toFixed(3)})`);
+                circle.setAttribute("fill", `rgba(88, 166, 92,${node.opacity.toFixed(3)})`);
             }
             // Draw every edge
             const edgeUpdateInterval = 10; // Adjust this value to control edge update frequency
@@ -275,8 +275,8 @@ function GraphBackground() {
                             y1: a.posY - dy * a.radius,
                             x2: b.posX + dx * b.radius,
                             y2: b.posY + dy * b.radius,
-                            stroke: `rgba(129,139,197,${opacity.toFixed(3)})`,
-                            "stroke-width": "0.005",
+                            stroke: `rgba(88,166,92,${opacity.toFixed(3)})`,
+                            "stroke-width": "0.0005",
                         })
                     );
                 }
@@ -371,8 +371,8 @@ return (
     >
       <defs>
         <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#575E85" />
-          <stop offset="100%" stopColor="#2E3145" />
+          <stop offset="0%" stopColor="#4c874f" />
+          <stop offset="100%" stopColor="#4c874f" />
         </linearGradient>
       </defs>
       <rect width="100%" height="100%" fill="url(#bgGradient)" />
