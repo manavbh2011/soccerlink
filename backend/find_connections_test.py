@@ -118,7 +118,7 @@ def find_connections(player1, player2, newGraph=True):
         paths = [p for p in nx.all_shortest_paths(graph, source=names_to_id_dict[player1], target=names_to_id_dict[player2])]
         rand_path = random.choice(paths)
         return get_path(graph, rand_path)
-    except: return {f"error": "No connections exist between {player1} and {player2}."}
+    except: return {"error": f"No connections exist between {player1} and {player2}."}
 
 if __name__ == "__main__":
     #play_game()
