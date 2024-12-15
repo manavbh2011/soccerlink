@@ -72,7 +72,7 @@ def get_path(graph, path):
     return res
 
 def is_valid_path(graph, players_to_id, path):
-    curNode = players_to_id[path[0]]
+    curNode = names_to_id(graph)[path[0]]
     for player in path[1:]:
         if not graph.has_edge(players_to_id[player], curNode): return False
         curNode = players_to_id[player]

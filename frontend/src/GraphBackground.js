@@ -7,7 +7,7 @@
  */
 import React, { useEffect, useRef } from "react";
 
-function GraphBackground() {
+function GraphBackground({ showBackground }) {
     const svgRef = useRef(null);
 
     useEffect(() => {

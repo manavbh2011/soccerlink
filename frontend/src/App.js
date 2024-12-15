@@ -10,6 +10,7 @@ function App() {
   const [error, setError] = useState(null)
   const [suggestions1, setSuggestions1] = useState([]);
   const [suggestions2, setSuggestions2] = useState([]);
+  const [showBackground, setShowBackground] = useState(true);
 
   const fetchSuggestions = async (input, setSuggestions) => {
     if (input.trim() === "") {
@@ -20,7 +21,6 @@ function App() {
       const response = await axios.post("http://127.0.0.1:3001/api/suggest-players", {
         query: input
       });
-      console.log("Suggestions", response);
       setSuggestions(response.data);
     } catch (err) {
       console.error("Error fetching suggestions:", err);
@@ -75,9 +75,24 @@ function App() {
     setSuggestions([]);
   };
 
+  const toggleBackground = () => {
+    setShowBackground(!showBackground);
+  };
   return (
     <div className="App">
-      <GraphBackground />
+      <div>
+      <div style={{ position: "absolute", top: 10, right: 10 }}>
+        <label>
+          <input
+            type="checkbox"
+            checked={showBackground}
+            onChange={toggleBackground}
+          />
+          Enable Background
+        </label>
+      </div>
+      {showBackground && <GraphBackground />}
+    </div>
       <header><h1 className="title" aria-label="Title: SoccerLink">SoccerLink</h1></header>
       <p className="subheading" aria-label="Subheading: how to use SoccerLink">
       Enter the names of two soccer players to find their connections through their club teammates.</p>
