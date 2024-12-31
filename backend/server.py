@@ -1,10 +1,11 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from find_connections_test import find_connections, suggest_players
+from find_connections_test import find_connections, suggest_players, open_graph
 
 app = Flask(__name__)
 CORS(app)  # Enable Cross-Origin Resource Sharing for the frontend
 
+graph = open_graph()
 @app.route('/api/suggest-players', methods=['POST'])
 def suggest_players_route():
     query = request.get_json()["query"]
@@ -30,7 +31,7 @@ def find_connections_route():
     
     try:
         # Call the function from your Python file
-        result = find_connections(input1, input2, newGraph=False)
+        result = find_connections(graph, input1, input2)
         print(result)
         return jsonify({"result": result})  # Return result as JSON
     except Exception as e:

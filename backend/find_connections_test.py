@@ -86,6 +86,10 @@ def suggest_players(query):
     matches = [names for names in players if query.lower() in names.lower()]
     return matches[:6] if matches else []
 
+def return_random_players(num=1):
+    players = read_into_dict("players_large.csv").values()
+    return random.sample(players, num)
+
 def dump_graph(folder_file_path):
     players = read_into_dict('players_large.csv')
     teams = read_into_dict('teams_large.csv')
@@ -95,17 +99,17 @@ def dump_graph(folder_file_path):
     with open(file_path, 'wb') as f:
         pickle.dump(graph, f)
 
-def find_connections(player1, player2, newGraph=True):
+def open_graph():
     folder_file_path = os.path.dirname(os.path.abspath(__file__))+"/graphs/"
-    if newGraph:
-        dump_graph(folder_file_path)
     file_path = folder_file_path+sorted(os.listdir(folder_file_path))[-2]
-    print(file_path)
     try:
         with open(file_path, 'rb') as f:
             graph = pickle.load(f)
     except Exception as e:
         return f"Failed to load graph from '{file_path}': {e}"
+    return graph
+
+def find_connections(graph, player1, player2):
     names_to_id_dict = names_to_id(graph)
     player1, player2 = remove_accents(player1), remove_accents(player2)
     if player1 not in names_to_id_dict: 
@@ -122,5 +126,6 @@ def find_connections(player1, player2, newGraph=True):
 
 if __name__ == "__main__":
     #play_game()
-    print(find_connections("Erling Haaland", "Pele", newGraph=False))
+    graph = open_graph()
+    print(find_connections(graph, "Erling Haaland", "Pele"))
     #print(suggest_players("Ron"))
