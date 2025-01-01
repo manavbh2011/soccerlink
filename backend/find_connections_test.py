@@ -81,11 +81,6 @@ def is_valid_path(graph, players_to_id, path):
 def names_to_id(graph):
     return {graph.nodes[node]["name"]:node for node in graph.nodes}
 
-def suggest_players(query):
-    players = read_into_dict("players_large.csv").values()
-    matches = [names for names in players if query.lower() in names.lower()]
-    return matches[:6] if matches else []
-
 def return_random_players(num=1):
     players = read_into_dict("players_large.csv").values()
     return random.sample(players, num)
