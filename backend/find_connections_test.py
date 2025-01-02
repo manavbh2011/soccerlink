@@ -74,9 +74,13 @@ def get_path(graph, path):
 def is_valid_path(graph, players_to_id, path):
     curNode = names_to_id(graph)[path[0]]
     for player in path[1:]:
-        if not graph.has_edge(players_to_id[player], curNode): return False
+        if not is_teammate(players_to_id[player], curNode): return False
         curNode = players_to_id[player]
     return True
+
+def is_teammate(graph, player1, player2):
+    names_id = names_to_id(graph)
+    return graph.has_edge(names_id[player1], names_id[player2])
 
 def names_to_id(graph):
     return {graph.nodes[node]["name"]:node for node in graph.nodes}
