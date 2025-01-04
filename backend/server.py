@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from find_connections_test import find_connections, read_into_dict, open_graph
+from find_connections_test import find_connections, read_into_dict, open_graph, is_teammate
 
 app = Flask(__name__)
 CORS(app)  # Enable Cross-Origin Resource Sharing for the frontend
@@ -40,5 +40,17 @@ def find_connections_route():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route('/api/validate-connection', methods=['POST'])
+def validate_connection_route():
+    data = request.get_json(0)
+    input1 = data.get('input1').strip()
+    input2 = data.get('input2').strip()
+    try:
+        result = is_teammate(graph, input1, input2)
+        print(result)
+        return jsonify({"valid": result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    
 if __name__ == '__main__':
     app.run(debug=True, port=3001)

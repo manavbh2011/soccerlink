@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const GamePage = () => {
     const [rows, setRows] = useState([{ player1: "", player2: "" }]);
@@ -18,7 +19,7 @@ const GamePage = () => {
                 input2: player2
             });
             const result = await response.json();
-            return result.valid; // Assume backend returns { valid: true/false }
+            return result.valid;
         } catch (error) {
             console.error("Error validating connection:", error);
             return false;
