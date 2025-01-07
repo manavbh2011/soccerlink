@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const GamePage = () => {
+const GameApp = () => {
     const [rows, setRows] = useState([{ player1: "", player2: "" }]);
     const [goal, setGoal] = useState({ start: "Player A", end: "Player B" }); // Example players
     const [message, setMessage] = useState("");
@@ -74,4 +74,4 @@ const GamePage = () => {
     );
 };
 
-export default GamePage;
+export default GameApp;
