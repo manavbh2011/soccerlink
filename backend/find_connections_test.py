@@ -34,9 +34,8 @@ def process_data_into_graph(players, teams, players_and_teams):
 
 def add_connections(graph):
     num_computations = 0
-    half_graph = list(graph.nodes)[:len(graph.nodes)//2]
     for node1 in graph.nodes:
-        for node2 in half_graph:
+        for node2 in graph.nodes:
             num_computations+=1
             if num_computations%1000000==0: print(f"Computation: {num_computations}: {graph.nodes[node1]["name"]} and {graph.nodes[node2]["name"]}")
             if node1==node2: continue
@@ -80,7 +79,8 @@ def is_valid_path(graph, players_to_id, path):
 
 def is_teammate(graph, player1, player2):
     names_id = names_to_id(graph)
-    return graph.has_edge(names_id[player1], names_id[player2])
+    player1_mod, player2_mod, = remove_accents(player1), remove_accents(player2)
+    return graph.has_edge(names_id[player1_mod], names_id[player2_mod])
 
 def names_to_id(graph):
     return {graph.nodes[node]["name"]:node for node in graph.nodes}
@@ -124,7 +124,8 @@ def find_connections(graph, player1, player2):
     except: return {"error": f"No connections exist between {player1} and {player2}."}
 
 if __name__ == "__main__":
-    #play_game()
-    graph = open_graph()
-    print(find_connections(graph, "Erling Haaland", "Pele"))
     #print(suggest_players("Ron"))
+    # folder_file_path = os.path.dirname(os.path.abspath(__file__))+"/graphs/"
+    # dump_graph(folder_file_path)
+    graph = open_graph()
+    print(find_connections(graph, "Jamie Vardy", "Lionel Messi"))

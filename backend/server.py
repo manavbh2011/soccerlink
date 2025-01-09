@@ -49,7 +49,7 @@ def find_connections_route():
 
 @app.route('/api/validate-connection', methods=['POST'])
 def validate_connection_route():
-    data = request.get_json(0)
+    data = request.get_json()
     input1 = data.get('input1').strip()
     input2 = data.get('input2').strip()
     try:
