@@ -73,9 +73,12 @@ const GameApp = () => {
         if (isValid && player2 === goal.end) {
             setGameCompleted(true);
         }
+        setSuggestions([]);
     };
-    const handleSuggestionClick = (name, setInput, setSuggestions) => {
-        setInput(name);
+    const handleSuggestionClick = (name, setSuggestions) => {
+        //setInput(name);
+        //const newRow = {player1: "", player2: name};
+        rows[rows.length - 1].player2 = name;
         setSuggestions([]);
       };
     const handleAddRow = () => {
@@ -113,6 +116,19 @@ const GameApp = () => {
                         onChange={(e) => handleInputChange(index, "player2", e.target.value)}
                         disabled = {gameCompleted}
                     />
+                    {suggestions.length > 0 && index == rows.length-1 && (
+                        <ul className="suggestions-list">
+                        {suggestions.map((name, index) => (
+                            <li
+                            key={index}
+                            className="suggestion-item"
+                            onClick={() => handleSuggestionClick(name, setSuggestions)}
+                            >
+                            {name}
+                            </li>
+                        ))}
+                        </ul>
+                    )}
                     {!gameCompleted && (
                         <>
                         <button onClick={() => handleValidate(index)}>Validate</button>
@@ -121,7 +137,7 @@ const GameApp = () => {
                             type="submit"
                             onClick={handleAddRow}
                             className="validate-button"
-                            disabled={!validationResults[index]}
+                            disabled={!validationResults[index] || index==4}
                             >
                             Add Row
                             </button>
