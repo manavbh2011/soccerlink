@@ -8,11 +8,11 @@ CORS(app)  # Enable Cross-Origin Resource Sharing for the frontend
 
 graph = open_graph()
 players = read_into_dict("players_large.csv").values()
-players_medium = read_into_dict("players_medium.csv").values()
+players_game = read_into_dict("players_game.csv").values()
 
 @app.route('/api/get-random-players', methods=['GET'])
 def get_random_player_route():
-    rand_players = random.sample(list(players_medium), 2)
+    rand_players = random.sample(list(players_game), 2)
     return jsonify({"start": rand_players[0], "end": rand_players[1]})
 
 @app.route('/api/suggest-players', methods=['POST'])

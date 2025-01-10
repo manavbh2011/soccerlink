@@ -98,7 +98,7 @@ const GameApp = () => {
     return (
         <div>
             <header><h1 className="title" aria-label="Title: Link the Players">Link the Players</h1></header>
-            <p className="subheading" aria-label="Game instructions">Goal: Connect {goal.start} to {goal.end}</p>
+            <p className="subheading" aria-label="Game instructions">Goal: Connect {goal.start} to {goal.end} using club teammates</p>
             {rows.map((row, index) => (
                 <div>
                     <input
@@ -106,7 +106,7 @@ const GameApp = () => {
                         placeholder="Player 1"
                         value={index === 0 ? goal.start : row.player1}
                         onChange={(e) => handleInputChange(index, "player1", e.target.value)}
-                        readOnly={index === 0}
+                        readOnly={true}
                         disabled = {gameCompleted}
                     />
                     <input
@@ -114,6 +114,7 @@ const GameApp = () => {
                         placeholder="Player 2"
                         value={row.player2}
                         onChange={(e) => handleInputChange(index, "player2", e.target.value)}
+                        readOnly={index!=rows.length-1}
                         disabled = {gameCompleted}
                     />
                     {suggestions.length > 0 && index == rows.length-1 && (
@@ -132,12 +133,12 @@ const GameApp = () => {
                     {!gameCompleted && (
                         <>
                         <button onClick={() => handleValidate(index)}>Validate</button>
-                        {index === rows.length - 1 && (
+                        {index === rows.length - 1 && index!==4 && (
                             <button 
                             type="submit"
                             onClick={handleAddRow}
                             className="validate-button"
-                            disabled={!validationResults[index] || index==4}
+                            disabled={!validationResults[index]}
                             >
                             Add Row
                             </button>
