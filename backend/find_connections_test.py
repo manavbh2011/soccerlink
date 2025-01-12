@@ -125,7 +125,7 @@ def find_connections(graph, player1, player2):
 
 if __name__ == "__main__":
     #print(suggest_players("Ron"))
-    # folder_file_path = os.path.dirname(os.path.abspath(__file__))+"/graphs/"
-    # dump_graph(folder_file_path)
-    graph = open_graph()
-    print(find_connections(graph, "Jamie Vardy", "Lionel Messi"))
+    folder_file_path = os.path.dirname(os.path.abspath(__file__))+"/graphs/"
+    dump_graph(folder_file_path)
+    # graph = open_graph()
+    # print(find_connections(graph, "Tomasz Kuszczak", "Sergio Reguilon"))

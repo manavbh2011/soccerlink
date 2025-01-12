@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const GameApp = () => {
-    const [goal, setGoal] = useState({ start: "Player A", end: "Player B" }); // Example players
+    const [goal, setGoal] = useState({ start: "", end: "" });
     const [rows, setRows] = useState([{ player1: "", player2: "" }]);
     const [suggestions, setSuggestions] = useState([]);
     const [validationResults, setValidationResults] = useState([]);
     const [gameCompleted, setGameCompleted] = useState(false);
+    const [validationTriggered, setValidationTriggered] = useState(rows.map(() => false));
 
     const handleInputChange = (index, field, value) => {
         const updatedRows = [...rows];
@@ -68,12 +69,15 @@ const GameApp = () => {
 
         const isValid = await validateConnection(player1, player2);
         const updatedResults = [...validationResults];
-        updatedResults[index] = isValid;
+        updatedResults[index] = isValid ? player2 : "";
         setValidationResults(updatedResults);
         if (isValid && player2 === goal.end) {
             setGameCompleted(true);
         }
         setSuggestions([]);
+        const updatedValidationTriggered = [...validationTriggered];
+        updatedValidationTriggered[index] = true;
+        setValidationTriggered(updatedValidationTriggered);
     };
     const handleSuggestionClick = (name, setSuggestions) => {
         //setInput(name);
@@ -93,6 +97,12 @@ const GameApp = () => {
           const updatedRows = [...rows];
           updatedRows.pop(); // Remove the last row
           setRows(updatedRows);
+          const updatedValidationRows = [...validationResults];
+          updatedValidationRows.pop();
+          setValidationResults(updatedValidationRows);
+          const updatedValidationTriggered = [...validationResults];
+          updatedValidationTriggered.pop();
+          setValidationTriggered(updatedValidationTriggered);
         }
       };
     return (
@@ -100,14 +110,17 @@ const GameApp = () => {
             <header><h1 className="title" aria-label="Title: Link the Players">Link the Players</h1></header>
             <p className="subheading" aria-label="Game instructions">Goal: Connect {goal.start} to {goal.end} using club teammates</p>
             {rows.map((row, index) => (
-                <div>
+                <div className="form-container" key={index}>
+                    <div className = "input-container">
                     <input
                         type="text"
                         placeholder="Player 1"
                         value={index === 0 ? goal.start : row.player1}
                         onChange={(e) => handleInputChange(index, "player1", e.target.value)}
                         readOnly={true}
+                        className={`input-box ${validationTriggered[index] ? validationResults[index] ? 'valid' : 'invalid' : ''}`}
                         disabled = {gameCompleted}
+                        aria-labelledby="player1"
                     />
                     <input
                         type="text"
@@ -115,7 +128,9 @@ const GameApp = () => {
                         value={row.player2}
                         onChange={(e) => handleInputChange(index, "player2", e.target.value)}
                         readOnly={index!=rows.length-1}
+                        className={`input-box ${validationTriggered[index] ? validationResults[index] ? 'valid' : 'invalid' : ''}`}
                         disabled = {gameCompleted}
+                        aria-labelledby="player2"
                     />
                     {suggestions.length > 0 && index == rows.length-1 && (
                         <ul className="suggestions-list">
@@ -130,31 +145,38 @@ const GameApp = () => {
                         ))}
                         </ul>
                     )}
+                    </div>
+                    <div className="button-container">
                     {!gameCompleted && (
                         <>
-                        <button onClick={() => handleValidate(index)}>Validate</button>
+                        <button 
+                        type="submit"
+                        className="validate-button"
+                        onClick={() => handleValidate(index)}
+                        disabled={row.player2===""}
+                        >
+                        Validate
+                        </button>
                         {index === rows.length - 1 && index!==4 && (
                             <button 
                             type="submit"
                             onClick={handleAddRow}
-                            className="validate-button"
-                            disabled={!validationResults[index]}
+                            className="row-button"
+                            disabled={!validationTriggered[index] || validationResults[index]!==row.player2}
                             >
-                            Add Row
+                            +
                             </button>
                         )}
                         {rows.length > 1 && index!==0 && (
-                        <button onClick={handleRemoveRow} style={{ marginLeft: "10px" }}>
-                            Remove Row
-                        </button>
+                        <button onClick={handleRemoveRow} className="row-button"> - </button>
                         )}
                         </>
-                    )}
+                    )}</div>
                 </div>
             ))}
             {gameCompleted && (
                 <div className = "win-message">
-                Congratulations! You found the link between {goal.start} and {goal.end}.
+                <b>Congratulations! You found the link between {goal.start} and {goal.end}.</b>
                 </div>
             )}
         </div>
