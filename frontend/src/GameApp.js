@@ -157,18 +157,23 @@ const GameApp = () => {
                         >
                         Validate
                         </button>
-                        {index === rows.length - 1 && index!==4 && (
+                        {index!==4 && (
                             <button 
-                            type="submit"
                             onClick={handleAddRow}
                             className="row-button"
-                            disabled={!validationTriggered[index] || validationResults[index]!==row.player2}
+                            disabled={!validationTriggered[index] || validationResults[index]!==row.player2 || index!=rows.length-1}
                             >
                             +
                             </button>
                         )}
                         {rows.length > 1 && index!==0 && (
-                        <button onClick={handleRemoveRow} className="row-button"> - </button>
+                            <button 
+                            onClick={handleRemoveRow} 
+                            className="row-button" 
+                            disabled={index!=rows.length-1} 
+                            >
+                            -
+                            </button>
                         )}
                         </>
                     )}</div>
