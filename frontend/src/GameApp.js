@@ -166,11 +166,11 @@ const GameApp = () => {
                             +
                             </button>
                         )}
-                        {rows.length > 1 && index!==0 && (
+                        {rows.length > 1 && (
                             <button 
                             onClick={handleRemoveRow} 
-                            className="row-button" 
-                            disabled={index!=rows.length-1} 
+                            className="row-button"
+                            disabled={index!=rows.length-1 || index==0} 
                             >
                             -
                             </button>

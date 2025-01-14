@@ -65,6 +65,7 @@ body {
   .button-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 10px;
   }
 
@@ -84,6 +85,7 @@ body {
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #042D63;
+    margin-right: 10px;
     border-radius: 5px;
     width: 200px;
     margin-bottom: 20px;
