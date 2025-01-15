@@ -157,15 +157,15 @@ const GameApp = () => {
                         >
                         Validate
                         </button>
-                        {index!==4 && (
+                        {
                             <button 
                             onClick={handleAddRow}
                             className="row-button"
-                            disabled={!validationTriggered[index] || validationResults[index]!==row.player2 || index!=rows.length-1}
+                            disabled={!validationTriggered[index] || validationResults[index]!==row.player2 || index!=rows.length-1 || index==4}
                             >
                             +
                             </button>
-                        )}
+                        }
                         {rows.length > 1 && (
                             <button 
                             onClick={handleRemoveRow} 
