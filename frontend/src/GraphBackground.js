@@ -230,9 +230,7 @@ function GraphBackground({ showBackground }) {
             function createSvgElem(tag, attribs) {
                 let result = document.createElementNS(svg.namespaceURI, tag);
                 for (const key in attribs) {
-                    if (attribs[key] === undefined || attribs[key] === null) {
-                        console.error(`Attribute '${key}' is undefined or null:`, attribs);
-                    } else {
+                    if (attribs[key] !== undefined && attribs[key] !== null) {
                         result.setAttribute(key, attribs[key].toString());
                     }
                 }
