@@ -108,10 +108,11 @@ function App() {
                 Enter the names of two soccer players to find their connections through their club teammates.</p>
                 <form className="form-container" onSubmit={handleSubmit}>
                     <div className="input-container">
-                    <label htmlFor="player1" className="input-label">Player 1:</label>
+                    {/*<label htmlFor="player1" className="input-label">Player 1:</label>*/}
                     <input
                         type="text"
                         id="player1"
+                        placeholder="Player 1"
                         value={input1}
                         onChange={(e) => handleInputChange(e, setInput1, setSuggestions1)}
                         className="input-box"
@@ -133,10 +134,11 @@ function App() {
                     </div>
                     
                     <div className="input-container">
-                    <label htmlFor="player2" className="input-label">Player 2:</label>
+                    {/*<label htmlFor="player2" className="input-label">Player 2:</label>*/}
                     <input
                         type="text"
                         id="player2"
+                        placeholder="Player 2"
                         value={input2}
                         onChange={(e) => handleInputChange(e, setInput2, setSuggestions2)}
                         className="input-box"
@@ -156,14 +158,14 @@ function App() {
                         </ul>
                     )}
                     </div>
-                    
+                    <div className="button-container">
                     <button 
                     type="submit" 
                     className="submit-button"
                     disabled={input1 === "" || input2 === ""}
                     >
                     Find Connections
-                    </button>
+                    </button></div>
                 </form>
                 <section>
                 {error && <div className="error-message">{error}</div>}
