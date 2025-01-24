@@ -211,8 +211,8 @@ function GraphBackground({ showBackground }) {
             let rectElem = svg.querySelector("rect");
             svg.setAttribute("width", this.relWidth.toString());
             svg.setAttribute("height", this.relHeight.toString());
-            svg.querySelectorAll("stop")[0].setAttribute("stop-color", "#4c874f");
-            svg.querySelectorAll("stop")[1].setAttribute("stop-color", "#4c874f");
+            svg.querySelectorAll("stop")[0].setAttribute("stop-color", "#56a35a");
+            svg.querySelectorAll("stop")[1].setAttribute("stop-color", "#56a35a");
             return this;
         }
         initSvgGraph() {
@@ -248,7 +248,7 @@ function GraphBackground({ showBackground }) {
                 }
                 circle.setAttribute("cx", node.posX);
                 circle.setAttribute("cy", node.posY);
-                circle.setAttribute("fill", `rgba(88, 166, 92,${node.opacity.toFixed(3)})`);
+                circle.setAttribute("fill", `rgba(76, 135, 79, ${node.opacity.toFixed(3)})`);
             }
             // Draw every edge
             const edgeUpdateInterval = 10; // Adjust this value to control edge update frequency
@@ -273,7 +273,7 @@ function GraphBackground({ showBackground }) {
                             y1: a.posY - dy * a.radius,
                             x2: b.posX + dx * b.radius,
                             y2: b.posY + dy * b.radius,
-                            stroke: `rgba(88,166,92,${opacity.toFixed(3)})`,
+                            stroke: `rgba(76, 135, 79, ${opacity.toFixed(3)})`,
                             "stroke-width": "0.0005",
                         })
                     );
@@ -369,8 +369,8 @@ return (
     >
       <defs>
         <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#4c874f" />
-          <stop offset="100%" stopColor="#4c874f" />
+          <stop offset="0%" stopColor="#56a35a" />
+          <stop offset="100%" stopColor="#56a35a" />
         </linearGradient>
       </defs>
       <rect width="100%" height="100%" fill="url(#bgGradient)" />
