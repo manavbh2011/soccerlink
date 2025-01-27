@@ -7,7 +7,6 @@ app = Flask(__name__)
 CORS(app)  # Enable Cross-Origin Resource Sharing for the frontend
 
 graph = open_graph()
-#players = read_into_dict("players_large.csv").values()
 players_game = read_into_dict("players_game.csv").values()
 players_with_nation = list(read_into_dict("players_with_nation.csv").values())
 players = [[player[0],player[-1]] for player in players_with_nation] #player with nationality code
@@ -49,6 +48,17 @@ def find_connections_route():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route('/api/get-nationality', methods=['POST'])
+def get_nationality_route():
+    query = request.get_json()["playerName"]
+    if not query:
+        return jsonify([])  # Empty list for no input
+    try:
+        nationality = [player[-1] for player in players_with_nation if query==player[0]][0]
+        return jsonify({"countryCode": nationality})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+    
 @app.route('/api/validate-connection', methods=['POST'])
 def validate_connection_route():
     data = request.get_json()

@@ -14,6 +14,7 @@ function App() {
   const [suggestions1, setSuggestions1] = useState([]);
   const [suggestions2, setSuggestions2] = useState([]);
   const [showBackground, setShowBackground] = useState(false);
+  const [showFlag, setShowFlag] = useState(false);
 
   const fetchSuggestions = async (input, setSuggestions) => {
     if (input.trim() === "") {
@@ -56,7 +57,17 @@ function App() {
             setResult([]);
         }
         else {
-            setResult(response.data.result);
+            const updatedResult = await Promise.all(response.data.result.map(async (line) => {
+                const countryCodeFrom = await getCountryCode(line.from);
+                const countryCodeTo = await getCountryCode(line.to);
+                
+                return {
+                    ...line,
+                    countryCodeFrom,
+                    countryCodeTo
+                };
+                }));
+            setResult(updatedResult);
             setError([]);
             } // Update result from the server response
         }
@@ -66,7 +77,15 @@ function App() {
 
     }
   };
-  
+  const getCountryCode = async (playerName) => {
+    try {
+      const response = await axios.post("http://127.0.0.1:3001/api/get-nationality", { playerName });
+      return response.data.countryCode; // Assume response contains country code
+    } catch (error) {
+      console.error(`Error fetching country code for ${playerName}:`, error);
+      return ""; // Fallback in case of an error
+    }
+  };
   const handleInputChange = (e, setInput, setSuggestions) => {
     const value = e.target.value;
     setInput(value);
@@ -81,10 +100,13 @@ function App() {
   const toggleBackground = () => {
     setShowBackground(!showBackground);
   };
+  const toggleFlag = () => {
+    setShowFlag(!showFlag);
+  };
   return (
     <Router>
     <div className="App">
-      <div style={{ position: "absolute", top: 10, right: 10 }}>
+      <div style={{ position: "absolute", top: 10, right: 19 }}>
         <label>
           <input
             type="checkbox"
@@ -104,6 +126,16 @@ function App() {
             path="/"
             element={
             <div>
+                <div style={{ position: "absolute", top: 50, right: 10}}>
+                    <label>
+                    <input
+                        type="checkbox"
+                        checked={showFlag}
+                        onChange={toggleFlag}
+                    />
+                    Show flags in results
+                    </label>
+                </div>
                 <header><h1 className="title" aria-label="Title: SoccerLink">SoccerLink</h1></header>
                 <p className="subheading" aria-label="Subheading: how to use SoccerLink">
                 Enter the names of two soccer players to find their connections through their club teammates.</p>
@@ -127,7 +159,7 @@ function App() {
                             className="suggestion-item"
                             onClick={() => handleSuggestionClick(name, setInput1, setSuggestions1)}
                             >
-                            <CustomFlag code={countryCode} />
+                            <CustomFlag code={countryCode} className="custom-flag" />
                             {name}
                             </li>
                         ))}
@@ -155,7 +187,7 @@ function App() {
                             onClick={() => handleSuggestionClick(name, setInput2, setSuggestions2)}
                             >
                             {name}
-                            <CustomFlag code={countryCode} />
+                            <CustomFlag code={countryCode} className="custom-flag" />
                             </li>
                         ))}
                         </ul>
@@ -175,7 +207,15 @@ function App() {
                 <div className="results">
                     {result.map((line, index) => (
                         <p key={index} className="result-line">
-                        {`${line.from} and ${line.to} played together on ${line.teams}`}
+                        <span className="player-name">
+                            {line.from} {showFlag && <CustomFlag code={line.countryCodeFrom} className="custom-flag-result" />}
+                        </span>
+                        {"and "}
+                        <span className="player-name">
+                            {line.to} {showFlag && <CustomFlag code={line.countryCodeTo} className="custom-flag-result" />}
+                        </span>
+                        {"played together on "}
+                        <span className="team-name">{line.teams}</span>
                         </p>
                     ))}
                     </div></section>

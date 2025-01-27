@@ -147,6 +147,7 @@ body {
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
+    margin-left: 15px;
     max-height: 1.5em;
     aspect-ratio: 4 / 3;
   }}
@@ -250,6 +251,17 @@ body {
     margin-bottom: 50px;
     text-align: center;
     color: #042D63;
+  }
+
+  .player-name {
+    display: inline-flex; 
+    align-items: center; 
+    margin-right: 10px; 
+  }
+
+  .custom-flag-result {
+    max-height: 1.2em;
+    margin-left: 15px;
   }
 
   .error-message {

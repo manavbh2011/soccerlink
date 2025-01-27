@@ -142,7 +142,7 @@ const GameApp = () => {
                             onClick={() => handleSuggestionClick(name, setSuggestions)}
                             >
                             {name}
-                            <CustomFlag code={countryCode} />
+                            <CustomFlag code={countryCode} className="custom-flag"/>
                             </li>
                         ))}
                         </ul>
