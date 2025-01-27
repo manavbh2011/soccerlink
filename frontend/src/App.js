@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import GraphBackground from "./GraphBackground";
 import GameApp from "./GameApp.js";
+import CustomFlag from "./CustomFlag";
 
 function App() {
   const [input1, setInput1] = useState("");
@@ -120,12 +121,13 @@ function App() {
                     />
                     {suggestions1.length > 0 && (
                         <ul className="suggestions-list">
-                        {suggestions1.map((name, index) => (
+                        {suggestions1.map(([name, countryCode], index) => (
                             <li
                             key={index}
                             className="suggestion-item"
                             onClick={() => handleSuggestionClick(name, setInput1, setSuggestions1)}
                             >
+                            <CustomFlag code={countryCode} />
                             {name}
                             </li>
                         ))}
@@ -146,13 +148,14 @@ function App() {
                     />
                     {suggestions2.length > 0 && (
                         <ul className="suggestions-list">
-                        {suggestions2.map((name, index) => (
+                        {suggestions2.map(([name, countryCode], index) => (
                             <li
                             key={index}
                             className="suggestion-item"
                             onClick={() => handleSuggestionClick(name, setInput2, setSuggestions2)}
                             >
                             {name}
+                            <CustomFlag code={countryCode} />
                             </li>
                         ))}
                         </ul>

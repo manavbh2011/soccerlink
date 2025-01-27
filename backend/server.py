@@ -7,8 +7,10 @@ app = Flask(__name__)
 CORS(app)  # Enable Cross-Origin Resource Sharing for the frontend
 
 graph = open_graph()
-players = read_into_dict("players_large.csv").values()
+#players = read_into_dict("players_large.csv").values()
 players_game = read_into_dict("players_game.csv").values()
+players_with_nation = list(read_into_dict("players_with_nation.csv").values())
+players = [[player[0],player[-1]] for player in players_with_nation] #player with nationality code
 
 @app.route('/api/get-random-players', methods=['GET'])
 def get_random_player_route():
@@ -21,7 +23,7 @@ def suggest_players_route():
     if not query:
         return jsonify([])  # Empty list for no input
     try:
-        matches = [names for names in players if query.lower() in names.lower()]
+        matches = [names for names in players if query.lower() in names[0].lower()]
         suggestions = matches[:6] if matches else []
         return jsonify(suggestions)
     except Exception as e:

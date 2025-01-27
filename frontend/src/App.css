@@ -127,14 +127,46 @@ body {
   }
   
   .suggestion-item {
+    position: relative;
     padding: 10px;
     cursor: pointer;
+  }
+  .suggestion-item span {
+    flex-grow: 1; /* Allow the text to take remaining space */
+    text-align: left; /* Align text to the left */
+    white-space: nowrap; /* Prevent text wrapping */
   }
   
   .suggestion-item:hover {
     background-color: #f0f0f0;
   }
 
+  @media (min-width: 601px) {
+  .custom-flag {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    max-height: 1.5em;
+    aspect-ratio: 4 / 3;
+  }}
+  
+  @media (max-width: 600px) {
+    .suggestion-item {
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+  
+    .custom-flag {
+      max-height: 2em;
+    }
+  
+    .suggestion-item span {
+      white-space: normal;
+      text-align: center;
+    }
+  }
   /* Submit button styling */
   .submit-button {
     padding: 10px 20px;

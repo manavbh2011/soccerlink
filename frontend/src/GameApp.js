@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import CustomFlag from "./CustomFlag";
 
 const GameApp = () => {
     const [goal, setGoal] = useState({ start: "", end: "" });
@@ -134,13 +135,14 @@ const GameApp = () => {
                     />
                     {suggestions.length > 0 && index == rows.length-1 && (
                         <ul className="suggestions-list">
-                        {suggestions.map((name, index) => (
+                        {suggestions.map(([name, countryCode], index) => (
                             <li
                             key={index}
                             className="suggestion-item"
                             onClick={() => handleSuggestionClick(name, setSuggestions)}
                             >
                             {name}
+                            <CustomFlag code={countryCode} />
                             </li>
                         ))}
                         </ul>

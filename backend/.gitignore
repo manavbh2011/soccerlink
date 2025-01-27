@@ -1,0 +1,11 @@
+/__pycache__
+/.ipynb_checkpoints
+/path
+/transfermarkt-api
+players_and_teams_medium.csv
+players_and_teams.csv
+players_large.csv
+players_medium.csv
+players.csv
+teams_medium.csv
+teams.csv
