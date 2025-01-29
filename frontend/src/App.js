@@ -210,11 +210,11 @@ function App() {
                         <span className="player-name">
                             {line.from} {showFlag && <CustomFlag code={line.countryCodeFrom} className="custom-flag-result" />}
                         </span>
-                        {"and "}
+                        {" and "}
                         <span className="player-name">
                             {line.to} {showFlag && <CustomFlag code={line.countryCodeTo} className="custom-flag-result" />}
                         </span>
-                        {"played together on "}
+                        {" played together on "}
                         <span className="team-name">{line.teams}</span>
                         </p>
                     ))}

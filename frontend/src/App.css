@@ -256,7 +256,6 @@ body {
   .player-name {
     display: inline-flex; 
     align-items: center; 
-    margin-right: 10px; 
   }
 
   .custom-flag-result {
