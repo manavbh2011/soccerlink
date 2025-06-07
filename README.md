@@ -6,7 +6,7 @@ SoccerLink: Find connections between two soccer players based on their club team
 Link the players: Link the two given players through their club teammates
 
 
-🔹 Key Features:
+🔹 Key Features:  
 ✅ Player Search & Autocomplete – Smart search with real-time suggestions, including national flags for context.  
 ✅ Graph-Based Algorithm – Uses NetworkX to compute the shortest connection path.  
 ✅ Interactive UI – Built with ReactJS for a seamless and intuitive experience.  
